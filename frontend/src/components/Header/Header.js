@@ -4,8 +4,8 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="bg-gray-800 text-white p-4 shadow-lg fixed w-full top-0 z-20">
-      <div className="container mx-auto flex justify-between items-center md:flex-row flex-col">
+    <header className="bg-gray-800 text-white  shadow-lg fixed w-full top-0 z-20">
+      <div className="container p-4 px-10 flex justify-between items-center md:flex-row flex-col">
         <h1 className="text-2xl font-bold tracking-wide">Flood Tracker</h1>
 
         {/* Mobile Menu Button */}

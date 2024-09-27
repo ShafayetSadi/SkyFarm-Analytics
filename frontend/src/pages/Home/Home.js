@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
-import Stats from "three/examples/jsm/libs/stats.module";
 
 const Home = () => {
   useEffect(() => {
@@ -106,9 +105,6 @@ const Home = () => {
     pointLight.position.set(5, 3, 5);
     scene.add(pointLight);
 
-    // FPS stats
-    const stats = Stats();
-    document.body.appendChild(stats.dom);
 
     // Resize handling
     const handleResize = () => {
@@ -131,13 +127,14 @@ const Home = () => {
 
       controls.update();
       renderer.render(scene, camera);
-      stats.update();
+     
     };
 
     animate();
 
     // Cleanup on unmount
     return () => {
+      
       window.removeEventListener("resize", handleResize);
       if (canvasContainer) {
         canvasContainer.removeChild(renderer.domElement);
@@ -147,11 +144,12 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="relative h-screen bg-[#1c1c1e] text-white">
+    <div className="relative h-screen w-full overflow-hidden bg-[#1c1c1e] text-white">
       {/* Text Section */}
       <div className="absolute inset-0 flex flex-col justify-center items-center text-center z-10 space-y-6">
         <h1 className="text-6xl font-bold mb-4 text-white tracking-wide">
           Welcome to Flood Tracker
+
         </h1>
         <p className="text-lg text-gray-400 max-w-lg">
           Track real-time flood warnings and risks with our interactive tool,
