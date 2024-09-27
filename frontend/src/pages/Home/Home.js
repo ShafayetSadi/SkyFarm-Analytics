@@ -1,73 +1,116 @@
 import React, { useEffect } from "react";
 import * as THREE from "three";
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
+import Stats from "three/examples/jsm/libs/stats.module";
 
 const Home = () => {
   useEffect(() => {
-    // Initialize Three.js scene
+    // Scene setup
     const scene = new THREE.Scene();
+
+    // Camera setup
     const camera = new THREE.PerspectiveCamera(
-      75,
+      60,
       window.innerWidth / window.innerHeight,
       0.1,
       1000
     );
+    camera.position.set(0, 0, 2);
+
+    // Renderer setup
     const renderer = new THREE.WebGLRenderer({ antialias: true });
     renderer.setSize(window.innerWidth, window.innerHeight);
-    renderer.setPixelRatio(window.devicePixelRatio);
+    renderer.setPixelRatio(window.devicePixelRatio || 1);
+    renderer.setClearColor(0x000000, 0); // Transparent background
 
-    // Append the renderer's DOM element only if it doesn't already exist
-    const earthModelContainer = document.getElementById("earth-model");
-    if (earthModelContainer && !earthModelContainer.hasChildNodes()) {
-      earthModelContainer.appendChild(renderer.domElement);
+    const canvasContainer = document.getElementById("earth-model");
+    if (canvasContainer && !canvasContainer.hasChildNodes()) {
+      canvasContainer.appendChild(renderer.domElement);
     }
 
-    // Water-like sphere (larger)
-    const geometry = new THREE.SphereGeometry(15, 64, 64); // Larger sphere
-    const waterTexture = new THREE.TextureLoader().load(
-      "https://threejs.org/examples/textures/waternormals.jpg" // High-resolution water texture
-    );
-    waterTexture.wrapS = waterTexture.wrapT = THREE.RepeatWrapping;
-    waterTexture.repeat.set(4, 4); // More tiling for detailed water ripples
+    // OrbitControls setup
+    const controls = new OrbitControls(camera, renderer.domElement);
+    controls.enableDamping = true;
+    controls.enablePan = false;
+    controls.maxDistance = 3;
 
-    const material = new THREE.MeshPhongMaterial({
-      color: 0x005f73, // Water-like color
-      shininess: 150, // Increase glossiness
-      bumpMap: waterTexture, // Use bump map for water ripples
-      bumpScale: 0.6, // Larger bump scale for more pronounced ripples
-      specular: 0x99ccff, // Light blue specular highlights
-      reflectivity: 1, // Increase reflectivity for water effect
+    // Earth geometry and material
+    const earthGeometry = new THREE.SphereGeometry(0.6, 64, 64);
+    const earthMaterial = new THREE.MeshPhongMaterial({
+      map: new THREE.TextureLoader().load("/assets/img/earthmap1k.jpg"),
+      bumpMap: new THREE.TextureLoader().load("/assets/img/earthbump.jpg"),
+      bumpScale: 0.2,
+      specularMap: new THREE.TextureLoader().load("/assets/img/earthspec.jpg"),
+      shininess: 10,
     });
 
-    const waterSphere = new THREE.Mesh(geometry, material);
-    scene.add(waterSphere);
+    const earthMesh = new THREE.Mesh(earthGeometry, earthMaterial);
+    scene.add(earthMesh);
 
-    // Lighting to reflect on water surface
-    const ambientLight = new THREE.AmbientLight(0xffffff, 0.1); // Bright ambient light
+    // Cloud geometry and material
+    const cloudGeometry = new THREE.SphereGeometry(0.63, 64, 64);
+    const cloudMaterial = new THREE.MeshPhongMaterial({
+      map: new THREE.TextureLoader().load("/assets/img/earthCloud.png"),
+      transparent: true,
+    });
+
+    const cloudMesh = new THREE.Mesh(cloudGeometry, cloudMaterial);
+    scene.add(cloudMesh);
+
+    // Galaxy background (star field) with less clutter
+    const starGeometry = new THREE.SphereGeometry(50, 64, 64); // Smaller radius
+    const starMaterial = new THREE.MeshBasicMaterial({
+      map: new THREE.TextureLoader().load("/assets/img/galaxy.png"),
+      side: THREE.BackSide,
+      opacity: 0.6, // Reduce the brightness and density
+      transparent: true,
+    });
+
+    const starMesh = new THREE.Mesh(starGeometry, starMaterial);
+    scene.add(starMesh);
+
+    // Atmospheric glow around the Earth
+    const vertexShader = `
+      varying vec3 vNormal;
+      void main() {
+        vNormal = normalize(normalMatrix * normal);
+        gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+      }
+    `;
+
+    const fragmentShader = `
+      varying vec3 vNormal;
+      void main() {
+        float intensity = pow(0.6 - dot(vNormal, vec3(0.0, 0.0, 1.0)), 3.0);
+        gl_FragColor = vec4(0.3, 0.6, 1.0, 1.0) * intensity; // Glow color
+        gl_FragColor.a *= intensity; // Gradient fade outwards
+      }
+    `;
+
+    const glowMaterial = new THREE.ShaderMaterial({
+      vertexShader,
+      fragmentShader,
+      side: THREE.BackSide,
+      blending: THREE.AdditiveBlending,
+      transparent: true,
+    });
+
+    const glowMesh = new THREE.Mesh(new THREE.SphereGeometry(0.68, 64, 64), glowMaterial);
+    scene.add(glowMesh);
+
+    // Lighting
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.2);
     scene.add(ambientLight);
 
-    const directionalLight = new THREE.DirectionalLight(0xffffff, 1.5);
-    directionalLight.position.set(5, 10, 7.5).normalize();
-    scene.add(directionalLight);
+    const pointLight = new THREE.PointLight(0xffffff, 1.2);
+    pointLight.position.set(5, 3, 5);
+    scene.add(pointLight);
 
-    camera.position.z = 30; // Zoom out to keep the sphere large in view
+    // FPS stats
+    const stats = Stats();
+    document.body.appendChild(stats.dom);
 
-    // Animation for waves (rotation and ripple effect)
-    let clock = new THREE.Clock();
-
-    const animate = () => {
-      requestAnimationFrame(animate);
-
-      // Increase wave movement by distorting the bump map over time
-      const time = clock.getElapsedTime();
-      waterTexture.offset.x = time * 0.02; // Slow horizontal movement for bigger waves
-      waterTexture.offset.y = time * 0.02; // Slow vertical movement
-
-      waterSphere.rotation.y += 0.005; // Slow rotation of the sphere
-
-      renderer.render(scene, camera);
-    };
-
-    // Handle window resize
+    // Resize handling
     const handleResize = () => {
       const width = window.innerWidth;
       const height = window.innerHeight;
@@ -75,16 +118,30 @@ const Home = () => {
       camera.aspect = width / height;
       camera.updateProjectionMatrix();
     };
-
     window.addEventListener("resize", handleResize);
 
-    // Start animation
+    // Animation loop
+    const animate = () => {
+      requestAnimationFrame(animate);
+
+      // Rotate the Earth and clouds
+      earthMesh.rotation.y -= 0.0015;
+      cloudMesh.rotation.y -= 0.001;
+      starMesh.rotation.y -= 0.0005;
+
+      controls.update();
+      renderer.render(scene, camera);
+      stats.update();
+    };
+
     animate();
 
-    // Clean up on component unmount
+    // Cleanup on unmount
     return () => {
       window.removeEventListener("resize", handleResize);
-      earthModelContainer.removeChild(renderer.domElement);
+      if (canvasContainer) {
+        canvasContainer.removeChild(renderer.domElement);
+      }
       renderer.dispose();
     };
   }, []);
@@ -92,24 +149,24 @@ const Home = () => {
   return (
     <div className="relative h-screen bg-[#1c1c1e] text-white">
       {/* Text Section */}
-      <div className="absolute inset-0 flex flex-col justify-center items-center text-center z-10">
-        <h1 className="text-5xl font-bold mb-4 text-white tracking-wide">
+      <div className="absolute inset-0 flex flex-col justify-center items-center text-center z-10 space-y-6">
+        <h1 className="text-6xl font-bold mb-4 text-white tracking-wide">
           Welcome to Flood Tracker
         </h1>
-        <p className="text-lg text-gray-400 max-w-md">
+        <p className="text-lg text-gray-400 max-w-lg">
           Track real-time flood warnings and risks with our interactive tool,
           designed to keep you safe and informed.
         </p>
+        <button className="mt-6 px-4 py-2 bg-blue-500 text-white rounded-full hover:bg-blue-600">
+          Learn More
+        </button>
       </div>
 
-      {/* Water Sphere Model */}
-      <div
-        id="earth-model"
-        className="absolute top-0 left-0 w-full h-full"
-      ></div>
+      {/* Earth Model */}
+      <div id="earth-model" className="absolute top-0 left-0 w-full h-full"></div>
 
       {/* Subtle Bottom Gradient */}
-      <div className="absolute bottom-0 w-full h-24 bg-gradient-to-t from-black to-transparent"></div>
+      <div className="absolute bottom-0 w-full h-32 bg-gradient-to-t from-black to-transparent"></div>
     </div>
   );
 };
