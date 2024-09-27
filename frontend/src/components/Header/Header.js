@@ -35,7 +35,7 @@ const Header = () => {
             isOpen ? "flex" : "hidden"
           } md:flex flex-col md:flex-row w-full h-screen md:h-auto md:w-auto items-center justify-center md:justify-between`}
         >
-          <ul className="flex flex-col md:flex-row items-center space-y-6 md:space-y-0 md:space-x-6 text-3xl">
+          <ul className="flex flex-col md:flex-row items-center space-y-6 md:space-y-0 md:space-x-6 text-3xl md:text-2xl">
             <li>
               <a
                 href="/"
