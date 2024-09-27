@@ -1,0 +1,4 @@
+.map-container {
+  /* Ensure container starts below the navbar */
+  margin-top: 60px; /* Adjust based on your navbar height */
+}
