@@ -22,7 +22,7 @@ const Home = () => {
 
     // Create Earth sphere
     const geometry = new THREE.SphereGeometry(5, 32, 32);
-    const material = new THREE.MeshBasicMaterial({ color: 0x0077be });
+    const material = new THREE.MeshBasicMaterial({ color: 0x005f73 });
     const earth = new THREE.Mesh(geometry, material);
     scene.add(earth);
 
@@ -59,14 +59,15 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="relative h-screen bg-black text-white">
+    <div className="relative h-screen bg-[#1c1c1e] text-white">
       {/* Text Section */}
-      <div className="absolute top-0 left-0 w-full text-center z-10 p-6">
-        <h1 className="text-6xl font-extrabold mb-4 mt-72 neon-text">
+      <div className="absolute inset-0 flex flex-col justify-center items-center text-center z-10">
+        <h1 className="text-5xl font-bold mb-4 text-white tracking-wide">
           Welcome to Flood Tracker
         </h1>
-        <p className="text-xl neon-subtext">
-          Track real-time flood warnings and risks with our interactive tool.
+        <p className="text-lg text-gray-400 max-w-md">
+          Track real-time flood warnings and risks with our interactive tool,
+          designed to keep you safe and informed.
         </p>
       </div>
 
@@ -76,8 +77,8 @@ const Home = () => {
         className="absolute top-0 left-0 w-full h-full"
       ></div>
 
-      {/* Bottom Glow Effect */}
-      <div className="absolute bottom-0 w-full h-2 bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500 animate-pulse"></div>
+      {/* Subtle Bottom Gradient */}
+      <div className="absolute bottom-0 w-full h-24 bg-gradient-to-t from-black to-transparent"></div>
     </div>
   );
 };

@@ -3,7 +3,7 @@ import React from "react";
 
 const Header = () => {
   return (
-    <header className="bg-gray-800 text-white p-4 shadow-lg fixed w-screen top-0 z-10">
+    <header className="bg-gray-800 text-white p-4 shadow-lg fixed w-screen top-0 z-20">
       <div className="container mx-auto flex justify-between items-center">
         <h1 className="text-xl font-bold">Flood Tracker</h1>
         <nav>
