@@ -46,7 +46,7 @@ const Header = () => {
             </li>
             <li>
               <a
-                href="/flood-map"
+                href="/floodmap"
                 className="hover:text-blue-400 transition-colors duration-300"
               >
                 Flood Map
