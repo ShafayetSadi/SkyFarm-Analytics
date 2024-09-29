@@ -1,0 +1,50 @@
+/* Rain Animation */
+.rain-container {
+  position: fixed; /* Cover the full screen */
+  top: 0;
+  left: 0;
+  width: 100vw; /* Full width of the viewport */
+  height: 100vh; /* Full height of the viewport */
+  pointer-events: none; /* So the animation doesn't block interaction */
+  z-index: -1; /* Place behind other content */
+  overflow: hidden;
+}
+
+.rain-drop {
+  position: absolute;
+  width: 2px;
+  height: 15px;
+  background-color: rgba(0, 162, 255, 0.7);
+  border-radius: 50%;
+  opacity: 0.7;
+  animation: fall linear infinite;
+}
+
+/* Randomize the starting position, size, and animation duration */
+.rain-drop:nth-child(odd) {
+  width: 1px;
+  height: 12px;
+  animation-duration: 1.8s;
+}
+
+.rain-drop:nth-child(even) {
+  width: 3px;
+  height: 20px;
+  animation-duration: 2.5s;
+}
+
+@keyframes fall {
+  0% {
+    top: -100px;
+    transform: translateY(0);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    top: 100vh;
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}

@@ -1,0 +1,58 @@
+/* Cloud-like styling for AlertCard */
+.alert-card {
+  position: relative; /* Relative positioning for rain to appear below the card */
+  background: linear-gradient(to bottom, #ffffff, #e0f7fa);
+  border-radius: 50px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.alert-card:hover {
+  transform: scale(1.05); /* Slight hover effect */
+}
+
+/* Position the rain below the card */
+.alert-card .rain-drop {
+  position: absolute;
+  width: 2px;
+  height: 15px;
+  background-color: rgba(0, 162, 255, 0.7);
+  border-radius: 50%;
+  opacity: 0.7;
+  animation: fall linear infinite;
+  bottom: -30px; /* Rain starts just below the card */
+  left: 50%;
+  transform: translateX(-50%); /* Center the rain below the card */
+}
+
+/* Different sizes and speeds for variety */
+.alert-card .rain-drop:nth-child(odd) {
+  width: 1px;
+  height: 12px;
+  animation-duration: 1.8s;
+}
+
+.alert-card .rain-drop:nth-child(even) {
+  width: 3px;
+  height: 20px;
+  animation-duration: 2.5s;
+}
+
+@keyframes fall {
+  0% {
+    top: 0;
+    transform: translateY(0);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    top: 100px; /* Raindrop fall distance below the card */
+    transform: translateY(100px);
+    opacity: 0;
+  }
+}
