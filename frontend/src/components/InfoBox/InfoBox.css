@@ -1,0 +1,13 @@
+/* InfoBox.css */
+.info-box {
+  max-width: 250px;
+  text-align: left;
+}
+
+.cta-button {
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #1d4ed8;
+}

@@ -1,0 +1,14 @@
+.earth-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1; /* Ensures it's behind other content */
+  overflow: hidden; /* Make sure no overflow happens */
+}
+
+canvas {
+  width: 100%;  /* Ensure the 3D Earth canvas covers full screen */
+  height: 100%;
+}
