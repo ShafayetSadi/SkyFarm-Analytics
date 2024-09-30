@@ -82,3 +82,28 @@ body {
 .cta-button:hover {
   background-color: #1d4ed8;
 }
+/* Earth container that keeps the Earth model on top */
+.earth-container {
+  width: 100vw;
+  height: 100vh; /* Full screen for Earth */
+  position: relative;
+  z-index: 10; /* Keeps it on top of everything */
+  overflow: hidden;
+}
+
+/* Info section starts after the Earth */
+.info-section {
+  min-height: 100vh; /* Ensure this takes at least full viewport height */
+  background-color: #1c1c1e; /* Continue the background color */
+}
+
+/* Optional: Space background section */
+/* Corrected: Using absolute path */
+.space-background {
+  width: 100vw;
+  height: 100vh;
+  background: url('../../../public/assets/img/galaxy.png') no-repeat center center;
+  background-size: cover;
+  position: relative;
+  z-index: 1; /* Background behind the info */
+}
