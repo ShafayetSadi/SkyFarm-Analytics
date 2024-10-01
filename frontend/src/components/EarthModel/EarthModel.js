@@ -132,7 +132,7 @@ const EarthModel = () => {
   }, []);
 
   return (
-    <div id="earth-model" className="absolute top-0 left-0 w-full h-full"></div>
+    <div id="earth-model" className="absolute top-0 left-0 w-fit h-full overflow-hidden"></div>
   );
 };
 

@@ -1,6 +1,6 @@
 /* General styling for the app */
 body {
-  font-family: 'Inter', sans-serif; /* Add a modern, clean font */
+  font-family: 'Orbitron', sans-serif;
 }
 
 /* Utility classes */
@@ -71,8 +71,48 @@ body {
 
 /* InfoBox.css */
 .info-box {
-  max-width: 250px;
+  width: 500px;
   text-align: left;
+}
+.animate-slide-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.animate-slide-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Add initial hidden state and left slide animation */
+.animate-slide-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.in-view {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+.animate-slide-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.in-view {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+.animate-slide-left.in-view {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .cta-button {
@@ -84,7 +124,7 @@ body {
 }
 /* Earth container that keeps the Earth model on top */
 .earth-container {
-  width: 100vw;
+  width: 98vw;
   height: 100vh; /* Full screen for Earth */
   position: relative;
   z-index: 10; /* Keeps it on top of everything */
@@ -100,7 +140,7 @@ body {
 /* Optional: Space background section */
 /* Corrected: Using absolute path */
 .space-background {
-  width: 100vw;
+
   height: 100vh;
   background: url('../../../public/assets/img/galaxy.png') no-repeat center center;
   background-size: cover;

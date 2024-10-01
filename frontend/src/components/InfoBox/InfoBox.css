@@ -1,13 +1,117 @@
 /* InfoBox.css */
+*{
+  font-family: 'Orbitron', sans-serif;
+}
 .info-box {
-  max-width: 250px;
-  text-align: left;
+  max-width: 600px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-left: 4px solid #06b6d4;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* InfoBox.css */
+.info-box {
+  max-width: 600px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-left: 4px solid #06b6d4;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  opacity: 0; /* Start as invisible */
+  transform: translateX(-50px); /* Start position for left animation */
+}
+
+/* Slide-in from left animation */
+.animate-slide-left {
+  opacity: 1; /* Make visible */
+  transform: translateX(0); /* Slide to original position */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.typing-text {
+  white-space: normal;
+  word-break: break-word;
+  line-height: 1.5;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.glow {
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.5), 0 0 50px rgba(0, 255, 255, 0.1);
 }
 
 .cta-button {
-  transition: background-color 0.3s ease;
+  margin-top: 20px;
+  transition: all 0.3s ease;
 }
 
 .cta-button:hover {
   background-color: #1d4ed8;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.5), 0 0 30px rgba(0, 255, 255, 0.5);
+}
+
+
+/* Slide-in from left */
+.animate-slide-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-slide-left.in-view {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.typing-text {
+  white-space: normal;
+  word-break: break-word;
+  line-height: 1.5;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.glow {
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.5), 0 0 50px rgba(0, 255, 255, 0.1);
+}
+
+.cta-button {
+  margin-top: 20px;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #1d4ed8;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.5), 0 0 30px rgba(0, 255, 255, 0.5);
+}
+
+/* Optional typing animation */
+.typing-text {
+  border-right: 2px solid #00ffff;
+  white-space: wrap;
+  overflow: hidden;
+}
+
+.typing-text::before {
+  content: '|';
+  opacity: 1;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

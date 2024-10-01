@@ -7,6 +7,16 @@
   z-index: -1; /* Ensures it's behind other content */
   overflow: hidden; /* Make sure no overflow happens */
 }
+/* EarthModel.css */
+#earth-model {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw; /* Full width of the viewport */
+  height: 100vh; /* Full height of the viewport */
+  overflow: hidden; /* Prevent any overflow */
+}
+
 
 canvas {
   width: 100%;  /* Ensure the 3D Earth canvas covers full screen */

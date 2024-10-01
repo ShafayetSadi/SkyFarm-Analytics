@@ -1,7 +1,6 @@
 import React from "react";
 import EarthModel from "../../components/EarthModel/EarthModel";
-import InfoBoxLeft from "../../components/InfoBox/InfoBoxLeft/InfoBoxLeft";
-import InfoBoxRight from "../../components/InfoBox/InfoBoxRight/InfoBoxRight";
+import InfoSection from "../../components/InfoSection/InfoSection"; // Import the new component
 import "./Home.css";
 
 const Home = () => {
@@ -13,23 +12,7 @@ const Home = () => {
       </div>
 
       {/* Info Section */}
-      <div className="info-section relative z-10 pt-8">
-        {/* Info Box 1 */}
-        <div className="flex justify-between mb-8 px-8">
-          <InfoBoxLeft />
-          <InfoBoxRight />
-        </div>
-        {/* Info Box 2 */}
-        <div className="flex justify-between mb-8 px-8">
-          <InfoBoxLeft />
-          <InfoBoxRight />
-        </div>
-        {/* Info Box 3 */}
-        <div className="flex justify-between mb-8 px-8">
-          <InfoBoxLeft />
-          <InfoBoxRight />
-        </div>
-      </div>
+      <InfoSection />
 
       {/* Background Space Image */}
       <div className="space-background">

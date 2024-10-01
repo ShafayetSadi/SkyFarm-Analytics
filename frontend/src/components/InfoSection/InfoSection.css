@@ -1,0 +1,54 @@
+/* Info Section Container */
+.info-section {
+  min-height: 100vh; /* Ensure this takes at least full viewport height */
+  background-color: #1c1c1e; /* Continue the background color */
+  padding: 2rem; /* Space inside the container */
+  position: relative;
+  z-index: 10;
+}
+
+/* Animation for sliding in from the left */
+.animate-slide-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-slide-left.in-view {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Animation for sliding in from the right */
+.animate-slide-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-slide-right.in-view {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Utility classes for flexbox alignment */
+.flex {
+  display: flex;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+/* Space background (optional) */
+.space-background {
+  height: 100vh;
+  background: url('../../../public/assets/img/galaxy.png') no-repeat center center;
+  background-size: cover;
+  position: relative;
+  z-index: 1; /* Background behind the info */
+}
