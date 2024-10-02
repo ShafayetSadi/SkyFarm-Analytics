@@ -177,3 +177,53 @@ body {
   opacity: 1;
   transform: translateX(0);
 }
+/* InfoBox.css */
+
+.info-section {
+  position: relative;
+  z-index: 1;
+}
+
+.info-section::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(0,255,255,0.3) 0%, rgba(0,0,0,0) 80%);
+  animation: moveGlow 8s infinite ease-in-out alternate;
+  filter: blur(80px);
+  z-index: -1;
+}
+
+.info-section::after {
+  content: "";
+  position: absolute;
+  bottom: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(58, 160, 255, 0.2) 0%, rgba(0,0,0,0) 80%);
+  animation: moveGlowReverse 8s infinite ease-in-out alternate;
+  filter: blur(100px);
+  z-index: -2;
+}
+
+@keyframes moveGlow {
+  0% {
+    transform: translate(-20%, -20%);
+  }
+  100% {
+    transform: translate(20%, 20%);
+  }
+}
+
+@keyframes moveGlowReverse {
+  0% {
+    transform: translate(20%, 20%);
+  }
+  100% {
+    transform: translate(-20%, -20%);
+  }
+}

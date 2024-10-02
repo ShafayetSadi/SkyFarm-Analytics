@@ -12,7 +12,7 @@ const Home = () => {
       </div>
 
       {/* Info Section with alternating positions for each InfoBox */}
-      <div className="info-section flex flex-col gap-6 px-8">
+      <div className="info-section glow-background flex flex-col gap-6 px-8">
         {/* Row 1 - Home Page Info on the left */}
         <div className="flex justify-start w-full">
           <InfoBox position="home" className="bg-secondary text-lightText" />
