@@ -1,3 +1,4 @@
+// pages/Alerts.js
 import React, { useState } from "react";
 import "./Alerts.css";
 import AlertCard from "../../components/AlertCard/AlertCard";
@@ -33,15 +34,18 @@ const Alerts = () => {
   const [alerts] = useState(sampleAlerts);
 
   return (
-    <div className="container mx-auto p-6">
-      <h1 className="text-3xl font-bold mb-4 text-blue-900">
+    <div className="container mx-auto p-6 bg-gray-950 min-h-screen relative">
+      <div className="rain-container"></div> {/* Rain animation background */}
+      <h1 className="text-4xl font-bold mb-6 text-blue-400 text-center drop-shadow-lg">
         Active Flood Alerts
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {alerts.length > 0 ? (
           alerts.map((alert, index) => <AlertCard key={index} alert={alert} />)
         ) : (
-          <p className="text-red-500">No active alerts at the moment.</p>
+          <p className="text-red-500 text-center">
+            No active alerts at the moment.
+          </p>
         )}
       </div>
     </div>
