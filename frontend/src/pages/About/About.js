@@ -11,7 +11,7 @@ const About = () => {
       0.1,
       1000
     );
-    const renderer = new THREE.WebGLRenderer();
+    const renderer = new THREE.WebGLRenderer({ antialias: true });
     const container = document.getElementById("threejs-container");
 
     // Make the renderer responsive
@@ -29,9 +29,9 @@ const About = () => {
       container.appendChild(renderer.domElement);
     }
 
-    // Create a cube
+    // Create a floating, rotating cube with accent color
     const geometry = new THREE.BoxGeometry();
-    const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+    const material = new THREE.MeshBasicMaterial({ color: 0x0bc5ea });
     const cube = new THREE.Mesh(geometry, material);
     scene.add(cube);
 
@@ -41,6 +41,7 @@ const About = () => {
       requestAnimationFrame(animate);
       cube.rotation.x += 0.01;
       cube.rotation.y += 0.01;
+      cube.position.y = Math.sin(Date.now() * 0.002) * 0.5; // Floating effect
       renderer.render(scene, camera);
     };
 
@@ -61,9 +62,11 @@ const About = () => {
 
   return (
     <div className="container mx-auto p-6">
-      <section className="text-center bg-gray-100 p-8 rounded-md shadow-lg">
-        <h1 className="text-3xl font-bold mb-4">About Flood Tracker</h1>
-        <p className="text-lg mb-6">
+      <section className="text-center bg-secondary p-8 rounded-md shadow-lg">
+        <h1 className="text-3xl font-bold mb-4 text-lightText">
+          About Flood Tracker
+        </h1>
+        <p className="text-lg mb-6 text-lightText">
           Flood Tracker provides real-time flood alerts using cutting-edge
           technologies. Our mission is to ensure the safety and awareness of
           people during critical events.
@@ -72,7 +75,7 @@ const About = () => {
 
       <div
         id="threejs-container"
-        className="w-full h-96 max-w-full p-6 relative overflow-hidden"
+        className="w-full h-96 max-w-full p-6 relative overflow-hidden bg-primary"
       ></div>
     </div>
   );
