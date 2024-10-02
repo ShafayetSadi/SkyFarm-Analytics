@@ -147,3 +147,33 @@ body {
   position: relative;
   z-index: 1; /* Background behind the info */
 }
+/* General InfoBox styling */
+.info-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  margin-top: 2rem;
+}
+
+/* Add specific positioning for left and right */
+.info-box {
+  width: 500px;
+  text-align: left;
+  opacity: 0;
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Animate sliding from left */
+.info-box.left {
+  transform: translateX(-50px);
+}
+.info-box.right {
+  transform: translateX(50px);
+}
+
+/* When in view, move to center and show */
+.info-box.in-view {
+  opacity: 1;
+  transform: translateX(0);
+}

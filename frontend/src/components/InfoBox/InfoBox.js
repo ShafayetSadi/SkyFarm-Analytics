@@ -5,75 +5,75 @@ import "./InfoBox.css";
 
 const InfoBox = ({ position }) => {
   const [text, setText] = useState("");
-  const [index, setIndex] = useState(0); // Track index in state
+  const [index, setIndex] = useState(0);
 
-  // Full texts for each InfoBox position
   const fullTexts = {
-    left: "Harness the power of innovation to safeguard our planet from flood risks. Stay informed, stay prepared.",
-    right:
-      "Join us in revolutionizing flood risk management through geolocation and real-time alerts.",
-    center:
-      "Understand the science behind floods and learn how to stay safe in emergencies with our comprehensive research.",
-    extra:
-      "Test your knowledge with our interactive quiz and learn more about how to protect yourself from flood hazards.",
-    floodMap:
-      "Explore our real-time Flood Map and stay up-to-date with changing weather conditions in your area.",
-    contact:
-      "Need help or want more information? Contact us for any queries or support.",
-    home: "Welcome to our Flood Risk Management Platform. Learn more about our mission and vision.",
+    home: "Welcome to our Flood Risk Management Platform. Explore our tools to help you stay safe from floods.",
+    about: "Learn more about our mission to revolutionize flood prevention and provide essential services to keep you safe.",
+    alerts: "Stay updated with real-time flood alerts in your area, ensuring you have the latest information at your fingertips.",
+    floodMap: "Visualize flood data on our real-time interactive map and understand the risks in your area.",
+    contact: "Need assistance or have any questions? Contact us for support and more information.",
+    quiz: "Test your flood knowledge with our interactive quiz and enhance your preparedness for emergencies.",
+    research: "Explore the latest research on flood risks, climate change, and prevention strategies.",
   };
 
-  // Titles for each InfoBox position
   const titles = {
-    left: "Explore the Future of Flood Prevention",
-    right: "Empower Your Future with Technology",
-    center: "Discover the Science Behind Floods",
-    extra: "Take the Quiz: Are You Prepared?",
-    floodMap: "Monitor Real-Time Flood Conditions",
-    contact: "Get in Touch with Us",
     home: "Welcome to Flood Management Platform",
+    about: "About Our Mission",
+    alerts: "Real-Time Alerts",
+    floodMap: "Explore the Flood Map",
+    contact: "Get in Touch",
+    quiz: "Test Your Flood Knowledge",
+    research: "Discover Our Research",
   };
 
-  // Links for each box's buttons
   const links = {
-    left: "/about", // Navigates to About page
-    right: "/alerts", // Navigates to Alerts page
-    center: "/research", // Navigates to Research page
-    extra: "/quiz", // Navigates to Quiz page
-    floodMap: "/floodmap", // Navigates to Flood Map page
-    contact: "/contact", // Navigates to Contact page
-    home: "/", // Navigates to Home page
+    home: "/",
+    about: "/about",
+    alerts: "/alerts",
+    floodMap: "/floodmap",
+    contact: "/contact",
+    quiz: "/quiz",
+    research: "/research",
   };
 
-  // React hook to detect when the component is in view
+  const buttonTexts = {
+    home: "Learn More About Us",
+    about: "Read About Us",
+    alerts: "Get Alerts Now",
+    floodMap: "View the Flood Map",
+    contact: "Contact Us",
+    quiz: "Take the Quiz",
+    research: "Explore Our Research",
+  };
+
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.5,
   });
 
   useEffect(() => {
-    if (!inView) return; // Don't start typing until in view
-
+    if (!inView || !fullTexts[position]) return;
     if (index < fullTexts[position].length) {
       const timeoutId = setTimeout(() => {
         setText((prev) => prev + fullTexts[position][index]);
-        setIndex(index + 1); // Move to the next character
-      }, 50); // Adjust the typing speed here
-
-      // Clear timeout when the component unmounts or when the text is fully typed
+        setIndex(index + 1);
+      }, 50);
       return () => clearTimeout(timeoutId);
     }
   }, [inView, index, fullTexts, position]);
 
+  if (!fullTexts[position]) {
+    return <div>Error: Invalid position provided</div>;
+  }
+
   return (
     <div
       ref={ref}
-      className={`info-box bg-opacity-80 p-6 bg-black/70 rounded-lg shadow-lg border-4 ${
+      className={`info-box bg-opacity-80 p-6 bg-black/70 rounded-lg shadow-lg border-4 mb-6 transition-transform transform hover:scale-105 hover:border-cyan-400 ${
         position === "left"
-          ? "border-l-cyan-500 animate-slide-left"
-          : position === "right"
-          ? "border-r-cyan-500 animate-slide-right"
-          : "border-t-cyan-500 animate-slide-up"
+          ? "border-l-cyan-500 animate-slide-left self-start"
+          : "border-r-cyan-500 animate-slide-right self-end"
       } glow ${inView ? "in-view" : "opacity-0"}`}
     >
       {/* Title */}
@@ -82,16 +82,10 @@ const InfoBox = ({ position }) => {
       {/* Typing text */}
       <p className="text-base mt-3 text-gray-200 typing-text">{text}</p>
 
-      {/* Call-to-action button with a Link for navigation */}
+      {/* Call-to-action button */}
       <Link to={links[position]}>
-        <button className="cta-button mt-5 py-3 px-6 bg-cyan-600 rounded-md text-white shadow-md hover:shadow-cyan-400 hover:bg-cyan-700 transition-all">
-          {position === "left" || position === "home"
-            ? "Learn More"
-            : position === "right" || position === "floodMap"
-            ? "Explore More"
-            : position === "contact"
-            ? "Contact Us"
-            : "Discover More"}
+        <button className="cta-button mt-5 py-3 px-6 bg-cyan-600 rounded-md text-white shadow-md hover:bg-gradient-to-r from-cyan-500 to-cyan-700 hover:shadow-cyan-500/50 transition-all">
+          {buttonTexts[position]}
         </button>
       </Link>
     </div>

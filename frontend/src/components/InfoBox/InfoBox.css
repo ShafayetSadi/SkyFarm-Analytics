@@ -1,80 +1,43 @@
-/* Global Font Styling */
-* {
-  font-family: 'Orbitron', sans-serif;
-}
-
-/* InfoBox Styling */
-.info-box {
-  max-width: 600px;
-  padding: 20px;
-  background-color: rgba(0, 0, 0, 0.7);
-  color: #fff;
+/* Container for InfoBoxes */
+.info-section {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  opacity: 0; /* Start as invisible */
-  transform: translateX(-50px); /* Initial position for left animation */
-  border-left: 4px solid #06b6d4; /* Left border for box */
-  border-right: 4px solid #06b6d4; /* Optional, if you want symmetry on both sides */
+  gap: 30px;
+  margin-top: 2rem;
+  align-items: center; /* Align items to the center for proper layout */
+}
+
+/* General InfoBox styling */
+.info-box {
+  width: 500px;
+  margin-left: 30px;
+  margin-right: 30px;
+  text-align: left;
+  opacity: 0;
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-/* Slide-in from left animation */
+/* Left aligned boxes */
+.self-start {
+  align-self: flex-start;
+}
+
+/* Right aligned boxes */
+.self-end {
+  align-self: flex-end;
+}
+
+/* Animate sliding from left */
 .animate-slide-left {
-  opacity: 1; /* Make visible */
-  transform: translateX(0); /* Slide to original position */
+  transform: translateX(-50px);
 }
 
-/* Text and Typing Effect */
-/* Text and Typing Effect */
-.typing-text {
-  font-size: 16px;
-  line-height: 1.5;
-  overflow: hidden;
-  white-space: normal; /* Allow multi-line text */
-  border-right: 2px solid #00ffff; /* For typing cursor effect */
-  word-break: break-word; /* Ensure long words break to new line */
-  animation: blink 0.7s step-end infinite; /* Only the blink animation for cursor */
+.animate-slide-right {
+  transform: translateX(50px);
 }
 
-/* Typing Animation */
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%; /* Expands to reveal full text */
-  }
-}
-
-/* Cursor Blink Effect */
-@keyframes blink {
-  from {
-    border-right-color: #00ffff;
-  }
-  to {
-    border-right-color: transparent;
-  }
-}
-
-/* Glow Effect for Box */
-.glow {
-  box-shadow: 0 0 15px rgba(0, 255, 255, 0.5), 0 0 50px rgba(0, 255, 255, 0.1);
-}
-
-/* Call-to-Action Button */
-.cta-button {
-  margin-top: 20px;
-  padding: 10px 20px;
-  background-color: #06b6d4;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  transition: all 0.3s ease;
-  box-shadow: 0 0 10px rgba(0, 255, 255, 0.3); /* Initial subtle shadow */
-}
-
-.cta-button:hover {
-  background-color: #1d4ed8;
-  box-shadow: 0 0 15px rgba(0, 255, 255, 0.5), 0 0 30px rgba(0, 255, 255, 0.5); /* Hover effect */
+/* When in view, move to center and show */
+.in-view {
+  opacity: 1;
+  transform: translateX(0);
 }
