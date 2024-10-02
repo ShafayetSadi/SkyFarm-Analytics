@@ -1,6 +1,6 @@
 import React from "react";
 import EarthModel from "../../components/EarthModel/EarthModel";
-import InfoSection from "../../components/InfoSection/InfoSection"; // Import the new component
+import InfoBox from "../../components/InfoBox/InfoBox"; // Import the new InfoBox component
 import "./Home.css";
 
 const Home = () => {
@@ -10,10 +10,14 @@ const Home = () => {
       <div className="earth-container">
         <EarthModel />
       </div>
-
-      {/* Info Section */}
-      <InfoSection />
-
+      {/* Info Section with Left and Right Info Boxes */}
+      <InfoBox position="left" /> {/* About Page Link */}
+      <InfoBox position="right" /> {/* Alerts Page Link */}
+      <InfoBox position="center" /> {/* Research Page Link */}
+      <InfoBox position="extra" /> {/* Quiz Page Link */}
+      <InfoBox position="floodMap" /> {/* Flood Map Page Link */}
+      <InfoBox position="contact" /> {/* Contact Page Link */}
+      <InfoBox position="home" /> {/* Home Page Link */}
       {/* Background Space Image */}
       <div className="space-background">
         {/* Optional: you can add a space background image or more content here */}

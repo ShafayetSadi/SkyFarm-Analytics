@@ -9,6 +9,8 @@ import Contact from "./pages/Contact/Contact";
 import NotFound from "./pages/NotFound/NotFound";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
+import Quiz from "./quiz_research/quiz/quiz.jsx";
+import Research from "./quiz_research/research/research.jsx";
 import "./App.css"; // Importing custom styles
 import "./styles/animations.css"; // Import animations
 
@@ -17,7 +19,7 @@ function App() {
     <Router>
       <div className="min-h-screen flex flex-col">
         {/* Header Navigation */}
-        <Header />
+        {/* <Header /> */}
 
         {/* Main Content Area */}
         <main className="flex-grow">
@@ -27,6 +29,8 @@ function App() {
             <Route path="/alerts" element={<Alerts />} />
             <Route path="/floodmap" element={<FloodMap />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/quiz" element={<Quiz />} />
+            <Route path="research" element={<Research />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>

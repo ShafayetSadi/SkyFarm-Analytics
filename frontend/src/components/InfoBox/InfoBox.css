@@ -1,117 +1,80 @@
-/* InfoBox.css */
-*{
+/* Global Font Styling */
+* {
   font-family: 'Orbitron', sans-serif;
 }
-.info-box {
-  max-width: 600px;
-  padding: 20px;
-  background-color: rgba(0, 0, 0, 0.7);
-  border-left: 4px solid #06b6d4;
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
 
-/* InfoBox.css */
+/* InfoBox Styling */
 .info-box {
   max-width: 600px;
   padding: 20px;
   background-color: rgba(0, 0, 0, 0.7);
-  border-left: 4px solid #06b6d4;
   color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   opacity: 0; /* Start as invisible */
-  transform: translateX(-50px); /* Start position for left animation */
+  transform: translateX(-50px); /* Initial position for left animation */
+  border-left: 4px solid #06b6d4; /* Left border for box */
+  border-right: 4px solid #06b6d4; /* Optional, if you want symmetry on both sides */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 /* Slide-in from left animation */
 .animate-slide-left {
   opacity: 1; /* Make visible */
   transform: translateX(0); /* Slide to original position */
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
+/* Text and Typing Effect */
+/* Text and Typing Effect */
 .typing-text {
-  white-space: normal;
-  word-break: break-word;
-  line-height: 1.5;
-  margin-top: 10px;
   font-size: 16px;
-}
-
-.glow {
-  box-shadow: 0 0 15px rgba(0, 255, 255, 0.5), 0 0 50px rgba(0, 255, 255, 0.1);
-}
-
-.cta-button {
-  margin-top: 20px;
-  transition: all 0.3s ease;
-}
-
-.cta-button:hover {
-  background-color: #1d4ed8;
-  box-shadow: 0 0 15px rgba(0, 255, 255, 0.5), 0 0 30px rgba(0, 255, 255, 0.5);
-}
-
-
-/* Slide-in from left */
-.animate-slide-left {
-  opacity: 0;
-  transform: translateX(-50px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.animate-slide-left.in-view {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-.typing-text {
-  white-space: normal;
-  word-break: break-word;
   line-height: 1.5;
-  margin-top: 10px;
-  font-size: 16px;
-}
-
-.glow {
-  box-shadow: 0 0 15px rgba(0, 255, 255, 0.5), 0 0 50px rgba(0, 255, 255, 0.1);
-}
-
-.cta-button {
-  margin-top: 20px;
-  transition: all 0.3s ease;
-}
-
-.cta-button:hover {
-  background-color: #1d4ed8;
-  box-shadow: 0 0 15px rgba(0, 255, 255, 0.5), 0 0 30px rgba(0, 255, 255, 0.5);
-}
-
-/* Optional typing animation */
-.typing-text {
-  border-right: 2px solid #00ffff;
-  white-space: wrap;
   overflow: hidden;
+  white-space: normal; /* Allow multi-line text */
+  border-right: 2px solid #00ffff; /* For typing cursor effect */
+  word-break: break-word; /* Ensure long words break to new line */
+  animation: blink 0.7s step-end infinite; /* Only the blink animation for cursor */
 }
 
-.typing-text::before {
-  content: '|';
-  opacity: 1;
-  animation: blink 0.7s infinite;
+/* Typing Animation */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%; /* Expands to reveal full text */
+  }
 }
 
+/* Cursor Blink Effect */
 @keyframes blink {
-  0% {
-    opacity: 1;
+  from {
+    border-right-color: #00ffff;
   }
-  50% {
-    opacity: 0;
+  to {
+    border-right-color: transparent;
   }
-  100% {
-    opacity: 1;
-  }
+}
+
+/* Glow Effect for Box */
+.glow {
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.5), 0 0 50px rgba(0, 255, 255, 0.1);
+}
+
+/* Call-to-Action Button */
+.cta-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #06b6d4;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.3); /* Initial subtle shadow */
+}
+
+.cta-button:hover {
+  background-color: #1d4ed8;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.5), 0 0 30px rgba(0, 255, 255, 0.5); /* Hover effect */
 }
