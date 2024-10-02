@@ -1,5 +1,5 @@
 import React from "react";
-import "./FloodMap.module.css";
+import "./FloodMap.css";
 
 const FloodMap = () => {
   return (
