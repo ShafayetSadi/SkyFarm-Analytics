@@ -8,11 +8,11 @@ input, textarea, select, button {
   cursor: text; /* Allow cursor for text input fields */
 }
 
-
 /* Optional: Prevent text selection if not needed */
 .contact-page {
   user-select: none; /* Prevent text selection */
 }
+
 .menu-container {
   position: absolute;
   top: 20px; /* Adjust as needed */

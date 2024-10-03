@@ -1,12 +1,13 @@
 import React from "react";
 import Menu from "../../components/Menu/Menu"; // Assuming Menu component has the hamburger menu
-import SkyFarmBot from "../SkyFarmBot/SkyFarmBot"; 
+import SkyFarmBot from "../SkyFarmBot/SkyFarmBot";
+
 const Contact = () => {
   return (
     <div className="Contact_page">
       <div className="Menu absolute top-5 left-5">
-      {/* Hamburger Menu */}
-      <Menu />        
+        {/* Hamburger Menu */}
+        <Menu />
       </div>
 
       <div className="container mx-auto pt-32 p-6 bg-dark-futuristic min-h-screen relative">
@@ -24,6 +25,7 @@ const Contact = () => {
             <input
               type="text"
               id="name"
+              placeholder="Enter your full name"
               className="w-full p-2 border border-gray-600 rounded-lg bg-gray-700 text-white focus:outline-none focus:ring focus:ring-cyan-500"
             />
           </div>
@@ -34,6 +36,7 @@ const Contact = () => {
             <input
               type="email"
               id="email"
+              placeholder="Enter your email address"
               className="w-full p-2 border border-gray-600 rounded-lg bg-gray-700 text-white focus:outline-none focus:ring focus:ring-cyan-500"
             />
           </div>
@@ -43,6 +46,7 @@ const Contact = () => {
             </label>
             <textarea
               id="message"
+              placeholder="Write your message here"
               className="w-full p-2 border border-gray-600 rounded-lg bg-gray-700 text-white focus:outline-none focus:ring focus:ring-cyan-500"
             ></textarea>
           </div>
@@ -54,7 +58,9 @@ const Contact = () => {
           </button>
         </form>
       </div>
-       <SkyFarmBot />
+
+      {/* SkyFarmBot Component */}
+      <SkyFarmBot />
     </div>
   );
 };
