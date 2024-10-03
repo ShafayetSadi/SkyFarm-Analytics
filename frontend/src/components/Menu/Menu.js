@@ -41,27 +41,35 @@ const MenuIcon = () => {
       <div className={`menu-items ${isOpen ? "show" : ""}`}>
         <Link to="/" className="menu-item">
           <FontAwesomeIcon icon={faHome} />
+          <span className="menu-text">Home</span>
         </Link>
         <Link to="/about" className="menu-item">
           <FontAwesomeIcon icon={faInfoCircle} />
+          <span className="menu-text">About</span>
         </Link>
         <Link to="/alerts" className="menu-item">
           <FontAwesomeIcon icon={faExclamationTriangle} />
+          <span className="menu-text">Alerts</span>
         </Link>
         <Link to="/weather" className="menu-item">
           <FontAwesomeIcon icon={faCloudSun} />
+          <span className="menu-text">Weather</span>
         </Link>
         <Link to="/floodmap" className="menu-item">
           <FontAwesomeIcon icon={faMapMarkedAlt} />
+          <span className="menu-text">Flood Map</span>
         </Link>
         <Link to="/contact" className="menu-item">
           <FontAwesomeIcon icon={faPhone} />
+          <span className="menu-text">Contact</span>
         </Link>
         <Link to="/quiz" className="menu-item">
           <FontAwesomeIcon icon={faQuestionCircle} />
+          <span className="menu-text">Quiz</span>
         </Link>
         <Link to="/research" className="menu-item">
           <FontAwesomeIcon icon={faBook} />
+          <span className="menu-text">Research</span>
         </Link>
       </div>
     </div>
