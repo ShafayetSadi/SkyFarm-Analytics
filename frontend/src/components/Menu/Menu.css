@@ -2,6 +2,21 @@
   position: relative;
   z-index: 10;
 }
+.hamburger-icon {
+    cursor: pointer;
+    outline: none; /* Remove focus outline */
+    transition: transform 0.3s ease; /* Smooth transformation */
+}
+
+/* Preventing blinking */
+.hamburger-icon:focus {
+    outline: none; /* Remove outline when focused */
+}
+
+/* Optional: Add hover styles */
+.hamburger-icon:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
 
 .menu-icon {
   width: 50px;
@@ -76,6 +91,7 @@
 .menu-items.show {
   opacity: 1;
   visibility: visible;
+  margin-left: 5px;
 }
 
 .menu-item {
