@@ -1,49 +1,47 @@
-// pages/Alerts.js
 import React, { useState } from "react";
 import "./Alerts.css";
 import AlertCard from "../../components/AlertCard/AlertCard";
+import WaterLevel from "../../components/WaterLevel/WaterLevel";
 
-// Sample data for alerts
 const sampleAlerts = [
   {
-    title: "Flood Warning - Riverbank",
-    description:
-      "Heavy rainfall expected to cause severe flooding near the riverbank.",
-    severity: "Severe",
-    region: "Riverbank Area",
-    issued: "2024-09-30 08:00 AM",
+    id: 1,
+    title: "Severe Flood Warning",
+    description: "Flood expected in region X.",
+    severity: "high",
   },
   {
-    title: "Flood Watch - Downtown",
-    description: "Watch for potential flooding due to increasing water levels.",
-    severity: "Moderate",
-    region: "Downtown Area",
-    issued: "2024-09-30 10:30 AM",
+    id: 2,
+    title: "Moderate Flood Alert",
+    description: "Flooding likely in region Y.",
+    severity: "moderate",
   },
   {
-    title: "Flash Flood Alert - Highway 56",
-    description:
-      "Flash flood expected in low-lying areas near Highway 56. Immediate action needed.",
-    severity: "High",
-    region: "Highway 56",
-    issued: "2024-09-30 06:00 AM",
+    id: 3,
+    title: "Flood Watch",
+    description: "Potential flood risk in region Z.",
+    severity: "low",
   },
 ];
 
 const Alerts = () => {
   const [alerts] = useState(sampleAlerts);
 
+  const currentLevel = 5;
+  const dangerLevel = 10;
+
   return (
-    <div className="container mx-auto p-6 bg-gray-950 min-h-screen relative">
-      <div className="rain-container"></div> {/* Rain animation background */}
-      <h1 className="text-4xl font-bold mb-6 text-blue-400 text-center drop-shadow-lg">
+    <div className="container mx-auto p-6 bg-dark-futuristic min-h-screen relative">
+      <div className="neon-rain"></div> {/* Futuristic neon rain background */}
+      <h1 className="text-5xl font-bold mb-6 text-neon-blue text-center glow-effect">
         Active Flood Alerts
       </h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <WaterLevel currentLevel={currentLevel} dangerLevel={dangerLevel} />
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 alert-grid">
         {alerts.length > 0 ? (
           alerts.map((alert, index) => <AlertCard key={index} alert={alert} />)
         ) : (
-          <p className="text-red-500 text-center">
+          <p className="text-neon-red text-center">
             No active alerts at the moment.
           </p>
         )}

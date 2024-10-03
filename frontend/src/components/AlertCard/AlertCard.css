@@ -1,58 +1,57 @@
-/* Cloud-like styling for AlertCard */
+/* Updated Futuristic Style for AlertCard */
 .alert-card {
-  position: relative; /* Relative positioning for rain to appear below the card */
-  background: linear-gradient(to bottom, #ffffff, #e0f7fa);
-  border-radius: 50px;
+  position: relative;
+  background: linear-gradient(145deg, #1e1e3f, #2e2e5a);
+  color: #e0e0e0;
+  border-radius: 20px;
   padding: 20px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  margin-bottom: 20px;
   text-align: center;
-  transition: transform 0.3s ease;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Hover Effect */
 .alert-card:hover {
-  transform: scale(1.05); /* Slight hover effect */
+  transform: translateY(-5px);
+  box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.6);
 }
 
-/* Position the rain below the card */
-.alert-card .rain-drop {
+/* Geometric Background Effect */
+.alert-card::before {
+  content: '';
   position: absolute;
-  width: 2px;
-  height: 15px;
-  background-color: rgba(0, 162, 255, 0.7);
-  border-radius: 50%;
-  opacity: 0.7;
-  animation: fall linear infinite;
-  bottom: -30px; /* Rain starts just below the card */
-  left: 50%;
-  transform: translateX(-50%); /* Center the rain below the card */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0) 80%);
+  border-radius: 20px;
+  filter: blur(8px);
+  z-index: -1;
 }
 
-/* Different sizes and speeds for variety */
-.alert-card .rain-drop:nth-child(odd) {
-  width: 1px;
-  height: 12px;
-  animation-duration: 1.8s;
+/* Add dynamic shapes behind the card */
+.alert-card::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(255, 0, 150, 0.1), rgba(0, 255, 255, 0.1));
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+  opacity: 0.5;
+  z-index: -2;
 }
 
-.alert-card .rain-drop:nth-child(even) {
-  width: 3px;
-  height: 20px;
-  animation-duration: 2.5s;
+/* Text adjustments for better visibility */
+.alert-card h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #00eaff; /* Bright neon cyan */
 }
 
-@keyframes fall {
-  0% {
-    top: 0;
-    transform: translateY(0);
-    opacity: 0;
-  }
-  20% {
-    opacity: 1;
-  }
-  100% {
-    top: 100px; /* Raindrop fall distance below the card */
-    transform: translateY(100px);
-    opacity: 0;
-  }
+.alert-card p {
+  margin-bottom: 8px;
+  color: #d0d0d0; /* Softer light gray for the body text */
 }
