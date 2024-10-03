@@ -1,3 +1,7 @@
+.container{
+  padding-top: 5%;
+}
+
 /* Dark futuristic theme */
 .bg-dark-futuristic {
   background: radial-gradient(circle, #0b0e17 0%, #03050d 100%);
