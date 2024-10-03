@@ -1,51 +1,64 @@
 import React from "react";
 import EarthModel from "../../components/EarthModel/EarthModel";
-import InfoBox from "../../components/InfoBox/InfoBox"; // Import the new InfoBox component
+import InfoBox from "../../components/InfoBox/InfoBox";
 import "./Home.css";
 
 const Home = () => {
+  const scrollToSection = () => {
+    window.scrollTo({
+      top: window.innerHeight, // Scroll to the next section
+      behavior: "smooth", // Smooth scroll behavior
+    });
+  };
+
   return (
     <div className="relative w-full bg-primary text-lightText font-mono">
-      {/* Earth Model */}
-      <div className="earth-container">
+      {/* Earth Model Section */}
+      <div className="earth-container relative">
+        {/* Welcome Message */}
+        <div className="welcome-message">
+          <h1>Welcome to Sky Farm Analytics</h1>
+          <p>Find live weather and flood updates</p>
+        </div>
+
+        {/* Earth Model */}
         <EarthModel />
+
+        {/* Scroll Down Button */}
+        <button onClick={scrollToSection} className="scroll-button">
+          <span className="arrow-down">&#x2193;</span>{" "}
+          {/* Unicode arrow down */}
+        </button>
       </div>
 
       {/* Info Section with alternating positions for each InfoBox */}
       <div className="info-section glow-background flex flex-col gap-6 px-8">
-        {/* Row 1 - Home Page Info on the left */}
         <div className="flex justify-start w-full">
           <InfoBox position="home" className="bg-secondary text-lightText" />
         </div>
-
-        {/* Row 2 - About Page Info on the right */}
         <div className="flex justify-end w-full">
           <InfoBox position="about" className="bg-secondary text-lightText" />
         </div>
-
-        {/* Row 3 - Alerts Page Info on the left */}
         <div className="flex justify-start w-full">
           <InfoBox position="alerts" className="bg-secondary text-lightText" />
         </div>
-
-        {/* Row 4 - Flood Map Page Info on the right */}
         <div className="flex justify-end w-full">
-          <InfoBox position="floodMap" className="bg-secondary text-lightText" />
+          <InfoBox
+            position="floodMap"
+            className="bg-secondary text-lightText"
+          />
         </div>
-
-        {/* Row 5 - Contact Page Info on the left */}
         <div className="flex justify-start w-full">
           <InfoBox position="contact" className="bg-secondary text-lightText" />
         </div>
-
-        {/* Row 6 - Quiz Page Info on the right */}
         <div className="flex justify-end w-full">
           <InfoBox position="quiz" className="bg-secondary text-lightText" />
         </div>
-
-        {/* Row 7 - Research Page Info on the left */}
         <div className="flex justify-start w-full">
-          <InfoBox position="research" className="bg-secondary text-lightText" />
+          <InfoBox
+            position="research"
+            className="bg-secondary text-lightText"
+          />
         </div>
       </div>
 

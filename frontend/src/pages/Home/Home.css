@@ -1,229 +1,92 @@
-/* General styling for the app */
-body {
-  font-family: 'Orbitron', sans-serif;
-}
-
-/* Utility classes */
-.text-white {
-  color: #ffffff;
-}
-
-.text-gray-400 {
-  color: #9ca3af;
-}
-
-.bg-gradient-to-t {
-  background: linear-gradient(to top, black, transparent);
-}
-
-/* Center flexbox utilities */
-.flex {
-  display: flex;
-}
-
-.justify-center {
-  justify-content: center;
-}
-
-.items-center {
-  align-items: center;
-}
-
-
-@keyframes typing {
-  from { width: 0; }
-  to { width: 100%; }
-}
-
-@keyframes blink {
-  from { border-right-color: rgba(255, 255, 255, 0.75); }
-  to { border-right-color: transparent; }
-}
-
-.typing-animation {
-  overflow: hidden;
-  white-space: nowrap;
-  border-right: 2px solid;
-  width: 0;
-  animation: typing 4s steps(40, end), blink 0.75s step-end infinite;
-  display: inline-block;
-}
-
-.typing-animation-delay {
-  overflow: hidden;
-  white-space: nowrap;
-  border-right: 2px solid;
-  width: 0;
-  animation: typing 6s steps(50, end) 1s forwards, blink 0.75s step-end infinite;
-  display: inline-block;
-}
-
-.neon-text {
-  text-shadow: 0 0 8px rgba(0, 150, 255, 0.5), 0 0 12px rgba(0, 150, 255, 0.6),
-    0 0 16px rgba(0, 150, 255, 0.7), 0 0 20px rgba(0, 150, 255, 0.8);
-}
-
-.neon-button {
-  box-shadow: 0 0 10px rgba(0, 150, 255, 0.8), 0 0 15px rgba(0, 150, 255, 1),
-    0 0 20px rgba(0, 150, 255, 1);
-}
-
-
-/* InfoBox.css */
-.info-box {
-  width: 500px;
-  text-align: left;
-}
-.animate-slide-left {
-  opacity: 0;
-  transform: translateX(-50px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-.animate-slide-left {
-  opacity: 0;
-  transform: translateX(-50px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-/* Add initial hidden state and left slide animation */
-.animate-slide-left {
-  opacity: 0;
-  transform: translateX(-50px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.in-view {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-
-.animate-slide-right {
-  opacity: 0;
-  transform: translateX(50px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.in-view {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-
-.animate-slide-left.in-view {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-.cta-button {
-  transition: background-color 0.3s ease;
-}
-
-.cta-button:hover {
-  background-color: #1d4ed8;
-}
 /* Earth container that keeps the Earth model on top */
 .earth-container {
   width: 98vw;
   height: 100vh; /* Full screen for Earth */
   position: relative;
-  z-index: 10; /* Keeps it on top of everything */
+  z-index: 10;
   overflow: hidden;
-}
-
-/* Info section starts after the Earth */
-.info-section {
-  min-height: 100vh; /* Ensure this takes at least full viewport height */
-  background-color: #1c1c1e; /* Continue the background color */
-}
-
-/* Optional: Space background section */
-/* Corrected: Using absolute path */
-.space-background {
-
-  height: 100vh;
-  background: url('../../../public/assets/img/galaxy.png') no-repeat center center;
-  background-size: cover;
-  position: relative;
-  z-index: 1; /* Background behind the info */
-}
-/* General InfoBox styling */
-.info-section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 30px;
-  margin-top: 2rem;
+  justify-content: center;
+  text-align: center;
 }
 
-/* Add specific positioning for left and right */
-.info-box {
-  width: 500px;
-  text-align: left;
-  opacity: 0;
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-/* Animate sliding from left */
-.info-box.left {
-  transform: translateX(-50px);
-}
-.info-box.right {
-  transform: translateX(50px);
-}
-
-/* When in view, move to center and show */
-.info-box.in-view {
-  opacity: 1;
-  transform: translateX(0);
-}
-/* InfoBox.css */
-
-.info-section {
-  position: relative;
-  z-index: 1;
-}
-
-.info-section::before {
-  content: "";
+/* Welcome message styling */
+.welcome-message {
   position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle, rgba(0,255,255,0.3) 0%, rgba(0,0,0,0) 80%);
-  animation: moveGlow 8s infinite ease-in-out alternate;
-  filter: blur(80px);
-  z-index: -1;
+  top: 5%;
+  text-align: center;
+  z-index: 15;
+  color: #0ff;
+  font-size: 2rem;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.7), 
+               0 0 20px rgba(0, 255, 255, 0.9),
+               0 0 30px rgba(0, 255, 255, 1),
+               0 0 40px rgba(0, 255, 255, 1);
 }
 
-.info-section::after {
-  content: "";
+.welcome-message h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.welcome-message p {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+/* Scroll button styling */
+.scroll-button {
   position: absolute;
-  bottom: -50%;
-  right: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle, rgba(58, 160, 255, 0.2) 0%, rgba(0,0,0,0) 80%);
-  animation: moveGlowReverse 8s infinite ease-in-out alternate;
-  filter: blur(100px);
-  z-index: -2;
+  bottom: 20px; /* Place it at the bottom of the container */
+  right: 5%;
+  transform: translateX(50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 2rem;
+  color: #0ff; /* Neon blue color */
+  transition: all 0.3s ease;
+  padding: 10px;
 }
 
-@keyframes moveGlow {
-  0% {
-    transform: translate(-20%, -20%);
-  }
-  100% {
-    transform: translate(20%, 20%);
+@media screen and (max-width: 768px) {
+  .scroll-button {
+    right: 50%;
+    transform: translateX(50%);
   }
 }
 
-@keyframes moveGlowReverse {
-  0% {
-    transform: translate(20%, 20%);
+/* Arrow down styling */
+.arrow-down {
+  font-size: 3rem;
+  animation: bounce 2s infinite;
+  color: #0ff; /* Neon glow color */
+  text-shadow: 0 0 5px rgba(0, 255, 255, 0.7), 
+               0 0 10px rgba(0, 255, 255, 0.4),
+               0 0 20px rgba(0, 255, 255, 0.5);
+  transition: text-shadow 0.3s ease;
+}
+
+/* Hover effect on the button */
+.scroll-button:hover .arrow-down {
+  color: #fff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.7),
+               0 0 20px rgba(0, 255, 255, 0.9),
+               0 0 30px rgba(0, 255, 255, 1),
+               0 0 40px rgba(0, 255, 255, 1); /* Glow intensifies */
+}
+
+/* Bouncing arrow animation */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
   }
-  100% {
-    transform: translate(-20%, -20%);
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
   }
 }

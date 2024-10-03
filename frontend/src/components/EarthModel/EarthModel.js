@@ -14,7 +14,7 @@ const EarthModel = () => {
       0.1,
       1000
     );
-    camera.position.set(0, 0, 2);
+    camera.position.set(0, 0.5, 2); // Move the camera upwards slightly
 
     const renderer = new THREE.WebGLRenderer({ antialias: true });
     renderer.setSize(window.innerWidth, window.innerHeight);
@@ -112,6 +112,7 @@ const EarthModel = () => {
 
     const animate = () => {
       requestAnimationFrame(animate);
+      
       earthMesh.rotation.y -= 0.0015;
       cloudMesh.rotation.y -= 0.001;
       starMesh.rotation.y -= 0.0005;
