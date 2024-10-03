@@ -34,6 +34,7 @@ function App() {
             <Route path="/quiz" element={<Quiz />} />
             <Route path="research" element={<Research />} />
             <Route path="*" element={<NotFound />} />
+            
           </Routes>
         </main>
 

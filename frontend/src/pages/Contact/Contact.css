@@ -1,0 +1,39 @@
+/* Disable cursor for non-text areas */
+* {
+  cursor: default; /* Default cursor for all elements */
+}
+
+/* Ensure input and text areas maintain focus/cursor behavior */
+input, textarea, select, button {
+  cursor: text; /* Allow cursor for text input fields */
+}
+
+
+/* Optional: Prevent text selection if not needed */
+.contact-page {
+  user-select: none; /* Prevent text selection */
+}
+.menu-container {
+  position: absolute;
+  top: 20px; /* Adjust as needed */
+  left: 20px; /* Adjust as needed */
+  z-index: 15; /* Keep it above other elements */
+}
+
+.menu-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 2px solid neonblue;
+  color: neonblue;
+  font-size: 30px;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.menu-icon:hover {
+  background-color: rgba(0, 255, 255, 0.1); /* Sky blue glow */
+}
