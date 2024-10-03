@@ -3,6 +3,7 @@ import {
     LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer
 } from 'recharts';
 import Menu from "../../components/Menu/Menu";
+import ChatBot from "../SkyFarmBot/SkyFarmBot";
 
 const data_ = {
     "latitude": 24,
@@ -263,6 +264,7 @@ const data = data_.hourly.time.map((time, index) => ({
                         </div>
                     </div>
                 </section>
+                <ChatBot />
             </div>
         );
     };
