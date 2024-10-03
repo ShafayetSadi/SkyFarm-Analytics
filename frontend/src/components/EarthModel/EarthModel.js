@@ -94,10 +94,10 @@ const EarthModel = () => {
     );
     scene.add(glowMesh);
 
-    const ambientLight = new THREE.AmbientLight(0xffffff, 0.2);
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.1);
     scene.add(ambientLight);
 
-    const pointLight = new THREE.PointLight(0xffffff, 5.5);
+    const pointLight = new THREE.PointLight(0xffffff, 7.5);
     pointLight.position.set(2, 1, 2);
     scene.add(pointLight);
 
