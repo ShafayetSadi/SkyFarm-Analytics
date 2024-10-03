@@ -37,7 +37,7 @@ const EarthModel = () => {
       bumpMap: new THREE.TextureLoader().load("/assets/img/earthbump.jpg"),
       bumpScale: 0.2,
       specularMap: new THREE.TextureLoader().load("/assets/img/earthspec.jpg"),
-      shininess: 10,
+      shininess: 20,
     });
 
     const earthMesh = new THREE.Mesh(earthGeometry, earthMaterial);
@@ -97,8 +97,8 @@ const EarthModel = () => {
     const ambientLight = new THREE.AmbientLight(0xffffff, 0.2);
     scene.add(ambientLight);
 
-    const pointLight = new THREE.PointLight(0xffffff, 1.2);
-    pointLight.position.set(5, 3, 5);
+    const pointLight = new THREE.PointLight(0xffffff, 5.5);
+    pointLight.position.set(2, 1, 2);
     scene.add(pointLight);
 
     const handleResize = () => {
