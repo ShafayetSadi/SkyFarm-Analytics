@@ -10,6 +10,7 @@ import {
   faPhone,
   faQuestionCircle,
   faBook,
+    faHeadset,
 } from "@fortawesome/free-solid-svg-icons";
 import "./Menu.css";
 
@@ -70,6 +71,10 @@ const MenuIcon = () => {
         <Link to="/research" className="menu-item">
           <FontAwesomeIcon icon={faBook} />
           <span className="menu-text">Research</span>
+        </Link>
+        <Link to="/skyfarmai" className="menu-item">
+          <FontAwesomeIcon icon={faHeadset} />
+          <span className="menu-text">SkyFarm AI</span>
         </Link>
       </div>
     </div>
