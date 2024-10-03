@@ -55,16 +55,16 @@ const Quiz = () => {
             {currentQuestion.options.map((option, index) => (
               <li
                 key={index}
-                className={`p-4 rounded-lg cursor-pointer text-center transition-colors duration-200 
+                className={`p-4 rounded-lg cursor-pointer text-center transition-colors duration-200 bg-gray-800 hover:bg-gray-700
                   ${
                     selectedOption === option && isCorrect === true
-                      ? "bg-blue-600 text-white"
+                      ? "bg-green-600 text-white hover:bg-green-700"
                       : ""
                   } 
                   ${
                     selectedOption === option && isCorrect === false
-                      ? "bg-red-500 text-white"
-                      : "bg-gray-800 hover:bg-gray-700"
+                      ? "bg-red-600 text-white hover:bg-red-700"
+                      : ""
                   }
                 `}
                 onClick={() => handleOptionClick(option)}

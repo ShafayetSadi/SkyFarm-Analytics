@@ -1,36 +1,68 @@
 {
-    "quizTitle": "NASA Space Quiz",
-    "questions": [
-      {
-        "id": 1,
-        "question": "What is the largest planet in our solar system?",
-        "options": ["Earth", "Mars", "Jupiter", "Saturn"],
-        "answer": "Jupiter"
-      },
-      {
-        "id": 2,
-        "question": "Who was the first person to walk on the moon?",
-        "options": ["Buzz Aldrin", "Yuri Gagarin", "Neil Armstrong", "Alan Shepard"],
-        "answer": "Neil Armstrong"
-      },
-      {
-        "id": 3,
-        "question": "What galaxy is Earth located in?",
-        "options": ["Andromeda Galaxy", "Milky Way Galaxy", "Whirlpool Galaxy", "Triangulum Galaxy"],
-        "answer": "Milky Way Galaxy"
-      },
-      {
-        "id": 4,
-        "question": "What is the hottest planet in the solar system?",
-        "options": ["Mercury", "Venus", "Mars", "Jupiter"],
-        "answer": "Venus"
-      },
-      {
-        "id": 5,
-        "question": "How long does it take for the Earth to orbit the Sun?",
-        "options": ["24 hours", "365 days", "30 days", "12 months"],
-        "answer": "365 days"
-      }
-    ]
-  }
-  
+  "quizTitle": "Flood and Weather Awareness Quiz",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is the primary cause of flooding?",
+      "options": [
+        "Heavy rainfall",
+        "Earthquakes",
+        "Volcanic eruptions",
+        "High winds"
+      ],
+      "answer": "Heavy rainfall"
+    },
+    {
+      "id": 2,
+      "question": "Which satellite is used to monitor weather patterns from space?",
+      "options": [
+        "Hubble Space Telescope",
+        "GOES Satellite",
+        "Voyager 1",
+        "Mars Reconnaissance Orbiter"
+      ],
+      "answer": "GOES Satellite"
+    },
+    {
+      "id": 3,
+      "question": "What scale is used to measure the intensity of hurricanes?",
+      "options": [
+        "Beaufort Scale",
+        "Saffir-Simpson Scale",
+        "Richter Scale",
+        "Fujita Scale"
+      ],
+      "answer": "Saffir-Simpson Scale"
+    },
+    {
+      "id": 4,
+      "question": "Which of the following is NOT a type of flood?",
+      "options": ["Flash flood", "Coastal flood", "River flood", "Drought"],
+      "answer": "Drought"
+    },
+    {
+      "id": 5,
+      "question": "What is the term for a large area of land that is prone to flooding?",
+      "options": ["Floodplain", "Wetland", "Reservoir", "Estuary"],
+      "answer": "Floodplain"
+    },
+    {
+      "id": 6,
+      "question": "Which atmospheric phenomenon is characterized by rapidly rotating storms that form over warm ocean waters?",
+      "options": ["Tornado", "Hurricane", "Blizzard", "Drought"],
+      "answer": "Hurricane"
+    },
+    {
+      "id": 7,
+      "question": "What tool do meteorologists use to predict weather conditions?",
+      "options": ["Anemometer", "Seismograph", "Barometer", "Hygrometer"],
+      "answer": "Barometer"
+    },
+    {
+      "id": 8,
+      "question": "What is the term for the gradual increase in Earth's average temperature due to greenhouse gas emissions?",
+      "options": ["Global warming", "Acid rain", "Ozone depletion", "El Niño"],
+      "answer": "Global warming"
+    }
+  ]
+}
