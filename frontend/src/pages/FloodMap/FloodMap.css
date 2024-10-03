@@ -1,7 +1,7 @@
-
-.floodMapContainer{
+.floodMapContainer {
   padding-top: -100px;
 }
+
 .iframe-container {
   position: relative;
   width: 100%;
@@ -22,4 +22,24 @@
   height: 150px; /* Adjust this height to hide the toolbar */
   background-color: #111827; /* Or any color matching your background */
   z-index: 1; /* Ensure the overlay is on top */
+}
+
+.alert-button {
+  display: inline-block;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  margin-top: 20px;
+  background-color: #dc2626; /* Tailwind Red-600 */
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.alert-button:hover {
+  background-color: #b91c1c; /* Tailwind Red-700 */
+  transform: scale(1.05);
 }
