@@ -31,7 +31,7 @@ const SkyFarmBot = () => {
     }, []);
 
     return (
-        <div style={{ width: '0px', height: '0px'}}>
+        <div className="Botpress_chatbot" style={{ width: '0px', height: '0px'}}>
             {/* Botpress chatbot */}
         </div>
     );
