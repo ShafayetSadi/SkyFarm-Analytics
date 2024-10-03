@@ -10,21 +10,19 @@ const FloodMap = () => {
         <Menu />
       </div>
 
-      <section className="map-container">
+      <section className="map-container flex justify-center">
         <div className="iframe-container mb-8">
-          <h2 className="text-2xl font-semibold mb-4 text-green-400">
-            SKYFARM ANALYTICS
-          </h2>
+          
 
           {/* Embedded ArcGIS map as an iframe */}
           <iframe
             src="https://www.ventusky.com/?p=34.5;98.2;3&l=clouds-total&t=20240930/1800&m=gem"
             title="ArcGIS Flood Map"
-            className="h-screen w-full rounded-md shadow-lg mb-6"
+            className="h-80 w-16  rounded-md shadow-lg mb-6"
           ></iframe>
 
           {/* Overlay */}
-          <div className="overlay bg-gray-900 text-center text-4xl pt-10 font-bold text-cyan-500">
+          <div className="overlay bg-gray-900 text-center text-4xl pt-20 font-bold text-cyan-500">
             Real-Time Data
           </div>
 
