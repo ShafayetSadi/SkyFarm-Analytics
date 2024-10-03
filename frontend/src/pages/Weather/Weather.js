@@ -199,7 +199,7 @@ const data = data_.hourly.time.map((time, index) => ({
 
                     <div className="iframe-container mb-8">
                         <h2 className="text-2xl font-semibold mb-4 text-green-400">
-                            SKY FARM ANALYTICS
+                            SKYFARM ANALYTICS
                         </h2>
                         <div className="overlay bg-gray-900 text-center text-4xl pt-10  font-bold text-cyan-500">
                             Real-Time Weather Update

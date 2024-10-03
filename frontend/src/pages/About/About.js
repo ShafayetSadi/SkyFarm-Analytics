@@ -12,7 +12,7 @@ const About = () => {
       </div>
       {/* Neon Title with Subtle Glow Effect */}
       <h1 className="text-5xl font-extrabold text-center mb-6 text-neon-green glow-effect animate-glow-pulse">
-        Sky Farm Analytics
+        SkyFarm Analytics
       </h1>
       {/* Mission and Vision Section */}
       <div className="text-section bg-secondary rounded-lg shadow-lg p-8 mb-10 max-w-4xl animate-fade-in-up">
@@ -20,7 +20,7 @@ const About = () => {
           Our Mission
         </h2>
         <p className="text-lg text-gray-300 leading-relaxed mb-8 animate-fade-in delay-1">
-          At Sky Farm Analytics, our mission is to empower farmers and
+          At SkyFarm Analytics, our mission is to empower farmers and
           communities with cutting-edge data analytics to monitor and adapt to
           environmental challenges. We provide real-time insights using advanced
           satellite technology and predictive algorithms to optimize resource
@@ -34,7 +34,7 @@ const About = () => {
         <p className="text-lg text-gray-300 leading-relaxed animate-fade-in delay-3">
           We envision a future where technology and nature coexist harmoniously,
           where farms are smart, self-sustaining ecosystems. Through continuous
-          innovation and global data collaboration, Sky Farm Analytics strives
+          innovation and global data collaboration, SkyFarm Analytics strives
           to create a world where food production is resilient, sustainable, and
           accessible for all, while mitigating the effects of climate change on
           agriculture.

@@ -13,7 +13,7 @@ const FloodMap = () => {
       <section className="map-container">
         <div className="iframe-container mb-8">
           <h2 className="text-2xl font-semibold mb-4 text-green-400">
-            SKY FARM ANALYTICS
+            SKYFARM ANALYTICS
           </h2>
 
           {/* Embedded ArcGIS map as an iframe */}

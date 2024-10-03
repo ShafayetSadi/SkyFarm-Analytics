@@ -30,11 +30,11 @@ const Home = () => {
         </button>
       </div>
       <div className="skyfarm-container_info-section ">
-        {/* New Sky Farm Analytics Section with moving space background */}
+        {/* New SkyFarm Analytics Section with moving space background */}
         <div className="skyfarm-container">
-          <h2>About Sky Farm Analytics</h2>
+          <h2>About SkyFarm Analytics</h2>
           <p>
-            Sky Farm Analytics is an innovative platform that provides real-time
+            SkyFarm Analytics is an innovative platform that provides real-time
             insights into climate data, weather patterns, and flood risks. Our
             goal is to equip communities with the information they need to
             respond proactively to environmental challenges.

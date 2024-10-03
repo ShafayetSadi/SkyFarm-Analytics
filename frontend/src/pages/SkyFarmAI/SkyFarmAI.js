@@ -45,7 +45,7 @@ const SkyFarmAI = () => {
                 <Menu/>
             </div>
             <header className="text-center text-2xl font-bold text-white mb-4">
-                Sky Farm AI Chatbot
+                SkyFarm AI Chatbot
             </header>
             <section className="px-28">
                 <WebchatProvider

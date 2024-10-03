@@ -32,7 +32,7 @@ const InfoBox = ({ position }) => {
     contact: "Get in Touch",
     quiz: "Test Your Flood Knowledge",
     research: "Discover Our Research",
-    skyfarmai: "Sky Farm AI",
+    skyfarmai: "SkyFarm AI",
   };
 
   const links = {
@@ -54,7 +54,7 @@ const InfoBox = ({ position }) => {
     contact: "Contact Us",
     quiz: "Take the Quiz",
     research: "Explore Our Research",
-    skyfarmai: "Chat with Sky Farm AI",
+    skyfarmai: "Chat with SkyFarm AI",
   };
 
   const { ref, inView } = useInView({
