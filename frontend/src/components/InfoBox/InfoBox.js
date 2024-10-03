@@ -94,7 +94,7 @@ const InfoBox = ({ position }) => {
 
       {/* Call-to-action button */}
       <Link to={links[position]}>
-        <button className="cta-button mt-5 py-3 px-6 bg-cyan-600 rounded-md text-white shadow-md hover:bg-gradient-to-r from-cyan-500 to-cyan-700 hover:shadow-cyan-500/50 transition-all">
+        <button className="  transition ease-in-out  mt-5 py-3 px-6 bg-cyan-600 rounded-md text-white shadow-md hover:bg-gradient-to-r from-cyan-500 to-cyan-700 hover:shadow-cyan-500/50 transition-all">
           {buttonTexts[position]}
         </button>
       </Link>

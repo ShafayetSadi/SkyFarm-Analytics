@@ -27,7 +27,7 @@
   left: -4px;
   right: -4px;
   border-radius: 16px;
-  background: linear-gradient(45deg, rgba(14, 106, 124, 0.5), rgba(44, 167, 122, 0.5));
+  background: rgba(4, 47, 56, 0.3);
   filter: blur(12px);
   z-index: -2;
 }
@@ -42,7 +42,7 @@
 /* Add a subtle internal glow */
 .info-box .glow {
   background: radial-gradient(circle at top left, rgba(11, 197, 234, 0.2), transparent 70%),
-              radial-gradient(circle at bottom right, rgba(52, 211, 153, 0.2), transparent 70%);
+              radial-gradient(circle at bottom right, rgba(78, 103, 94, 0.2), transparent 70%);
   position: absolute;
   top: 0;
   bottom: 0;
@@ -91,12 +91,9 @@
 
 /* Call-to-action button improvements for neon theme */
 .cta-button {
-  background: linear-gradient(90deg, rgba(11, 197, 234, 0.6), rgba(52, 211, 153, 0.6)); /* Neon gradient */
-  box-shadow: 0 4px 15px rgba(11, 197, 234, 0.4), 0 2px 10px rgba(52, 211, 153, 0.3); /* Neon shadow */
+  background: linear-gradient(90deg, #3ebdbd,#008080); /* Neon gradient */
+  box-shadow: 0 4px 15px rgba(11, 197, 234, 0.4), 0 2px 10px rgba(74, 111, 98, 0.3); /* Neon shadow */
   transition: transform 0.3s, box-shadow 0.3s ease-in-out;
 }
 
-.cta-button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 25px rgba(11, 197, 234, 0.7), 0 4px 12px rgba(52, 211, 153, 0.5);
-}
+
