@@ -59,8 +59,8 @@ const Research = () => {
       </div>
       <h1 className="text-4xl font-bold text-center bg-gradient-to-r from-green-400 to-blue-500 text-transparent bg-clip-text mb-12 animate-float">
         Research on Climate Change and Its Effect
-      </h1>
-
+      </h1> 
+{/* comment */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
         {researchData.map((research, index) => (
           <div
