@@ -3,8 +3,8 @@ import "./FloodMap.css";
 
 const FloodMap = () => {
   return (
-    <div className="floodMapContainer mx-auto p-6 mt-[-80px] text-gray-200 bg-gray-900 min-h-screen relative">
-      <section className="map-container mt-16">
+    <div className="floodMapContainer mx-auto p-6  text-gray-200 bg-gray-900 min-h-screen relative">
+      <section className="map-container">
         {/* Alert Button */}
         <a
           href="/alerts"
@@ -34,7 +34,7 @@ const FloodMap = () => {
           ></iframe>
 
           {/* Overlay to visually hide the top portion of the iframe */}
-          <div className="overlay bg-gray-900 text-center text-4xl pt-20 font-bold text-blue-500">
+          <div className="overlay bg-gray-900 text-center text-4xl pt-10  font-bold text-blue-500">
             Real-Time Data
           </div>
         </div>
