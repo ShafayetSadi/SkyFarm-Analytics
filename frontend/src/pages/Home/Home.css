@@ -1,3 +1,8 @@
+*{
+  font-family: 'Orbitron', sans-serif !important; 
+}
+
+
 /* Earth container that keeps the Earth model on top */
 .earth-container {
   width: 98vw;

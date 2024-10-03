@@ -4,4 +4,5 @@
 @import "leaflet/dist/leaflet.css";
 html {
   scroll-behavior: smooth;
+   font-family: 'Orbitron', sans-serif !important; 
 }
