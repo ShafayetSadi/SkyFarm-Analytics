@@ -1,0 +1,79 @@
+/* Neon Glow Effect */
+.glow-effect {
+  text-shadow: 0 0 10px #34d399, 0 0 20px #34d399, 0 0 40px #34d399;
+}
+
+/* Subtle Pulsing Glow for Title */
+.animate-glow-pulse {
+  animation: glowPulse 3s ease-in-out infinite alternate;
+}
+
+@keyframes glowPulse {
+  from {
+    opacity: 1;
+    text-shadow: 0 0 10px #0bc5ea, 0 0 20px #0bc5ea;
+  }
+  to {
+    opacity: 0.8;
+    text-shadow: 0 0 30px #0bc5ea, 0 0 50px #0bc5ea;
+  }
+}
+
+/* Slide-in Animation from Left */
+.animate-slide-in-left {
+  animation: slideInLeft 1s ease-in-out forwards;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Fade-in Up Animation */
+.animate-fade-in-up {
+  animation: fadeInUp 1.5s ease-in-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Staggered Delay for Fading */
+.animate-fade-in.delay-1 {
+  animation-delay: 0.5s;
+}
+
+.animate-fade-in.delay-2 {
+  animation-delay: 1s;
+}
+
+.animate-fade-in.delay-3 {
+  animation-delay: 1.5s;
+}
+
+/* Button Glow Effect */
+.animate-glow-btn {
+  animation: buttonGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes buttonGlow {
+  from {
+    box-shadow: 0 0 10px #0bc5ea, 0 0 20px #0bc5ea;
+  }
+  to {
+    box-shadow: 0 0 20px #0bc5ea, 0 0 40px #0bc5ea;
+  }
+}
