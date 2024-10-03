@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom"; // Import the useNavigate hook
 import quizData from "./quizdata.json";
+import Menu from "../../components/Menu/Menu";
 
 const Quiz = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -38,6 +39,9 @@ const Quiz = () => {
 
   return (
     <div className="container bg-gray-900 text-gray-200 min-h-screen p-6 flex flex-col items-center justify-center">
+      <div className=" absolute top-5 left-5">
+        <Menu />
+      </div>
       <h1 className="text-3xl font-bold mb-4 text-neon-blue">
         {quizData.quizTitle}
       </h1>

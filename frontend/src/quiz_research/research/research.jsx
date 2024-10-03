@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom"; // Ensure you have react-router-dom for navigation
 import "./research.css";
+import Menu from "../../components/Menu/Menu"; // Import the Menu component
 
 const Research = () => {
   const researchData = [
@@ -53,25 +54,9 @@ const Research = () => {
 
   return (
     <div className="research-container bg-gray-900 min-h-screen py-10 text-gray-200 relative">
-      {/* Home Button */}
-      <Link to="/" className="home-icon absolute top-4 left-4">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="icon icon-tabler icon-tabler-home"
-          width="36"
-          height="36"
-          viewBox="0 0 24 24"
-          strokeWidth="2"
-          stroke="currentColor"
-          fill="none"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-          <path d="M3 9l9 -6l9 6v11a2 2 0 0 1 -2 2h-4a2 2 0 0 1 -2 -2v-7h-4v7a2 2 0 0 1 -2 2h-4a2 2 0 0 1 -2 -2z" />
-        </svg>
-      </Link>
-
+      <div className=" absolute top-5 left-5">
+        <Menu />
+      </div>
       <h1 className="text-4xl font-bold text-center bg-gradient-to-r from-green-400 to-blue-500 text-transparent bg-clip-text mb-12 animate-float">
         Research on Climate Change and Its Effect
       </h1>

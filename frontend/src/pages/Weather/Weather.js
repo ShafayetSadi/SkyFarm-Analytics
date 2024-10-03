@@ -2,6 +2,7 @@ import React from 'react';
 import {
     LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer
 } from 'recharts';
+import Menu from "../../components/Menu/Menu";
 
 const data_ = {
     "latitude": 24,
@@ -191,21 +192,11 @@ const data = data_.hourly.time.map((time, index) => ({
     const Weather = () => {
         return (
             <div className="floodMapContainer mx-auto p-6 text-gray-200 bg-gray-900 min-h-screen relative">
+                <div className=' absolute top-5 left-5'>
+                    <Menu />
+                </div>
                 <section className="map-container">
-                    <a
-                        href="/alerts"
-                        className="absolute z-20 top-32 right-10 bg-red-600 text-white px-4 py-2 rounded-lg shadow-lg hover:bg-red-700 transition-transform transform hover:scale-105"
-                    >
-                        Go to Alerts
-                    </a>
 
-                    {/* Home Button */}
-                    <a
-                        href="/"
-                        className="absolute z-20 top-32 left-10 bg-gray-800 text-green-400 px-4 py-2 rounded-lg shadow-lg hover:bg-green-500 hover:text-white transition-transform transform hover:scale-105"
-                    >
-                        Home
-                    </a>
                     <div className="iframe-container mb-8">
                         <h2 className="text-2xl font-semibold mb-4 text-green-400">
                             SKY FARM ANALYTICS
