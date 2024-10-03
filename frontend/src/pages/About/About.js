@@ -1,15 +1,21 @@
 import React from "react";
 import "./About.css";
-import Contact from './../Contact/Contact';
+import Menu from "../../components/Menu/Menu"; // Import the Menu component
 
 const About = () => {
   return (
-    <div className="about-container bg-primary min-h-screen p-8 flex flex-col items-center justify-center">
+    <div className="about-container bg-primary min-h-screen p-8 flex flex-col items-center justify-center relative">
+      {" "}
+      {/* Add relative positioning */}
+      <div className=" absolute top-5 left-5">
+    <Menu /> {/* Add the Menu component here */}
+      
+      </div >
+  
       {/* Neon Title with Subtle Glow Effect */}
       <h1 className="text-5xl font-extrabold text-center mb-6 text-neon-green glow-effect animate-glow-pulse">
         Sky Farm Analytics
       </h1>
-
       {/* Mission and Vision Section */}
       <div className="text-section bg-secondary rounded-lg shadow-lg p-8 mb-10 max-w-4xl animate-fade-in-up">
         <h2 className="text-3xl font-semibold text-center text-lightText mb-4 animate-slide-in-left">
@@ -36,8 +42,6 @@ const About = () => {
           agriculture.
         </p>
       </div>
-
-   
       <a
         href="/contact"
         className="explore-button bg-neon-cyan text-neonBlue font-bold py-3 px-6 rounded-full shadow-md hover:bg-neon-green transition-transform transform hover:scale-105 animate-glow-btn"
