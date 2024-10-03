@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom"; // Import the useNavigate hook
 import quizData from "./quizdata.json";
 import Menu from "../../components/Menu/Menu";
+import SkyFarmBot from "../../pages/SkyFarmBot/SkyFarmBot";
 
 const Quiz = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -106,6 +107,7 @@ const Quiz = () => {
               Back to Home
             </button>
           </div>
+          <SkyFarmBot />
         </div>
       )}
     </div>

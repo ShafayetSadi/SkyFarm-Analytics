@@ -1,17 +1,15 @@
 import React from "react";
 import "./About.css";
 import Menu from "../../components/Menu/Menu"; // Import the Menu component
-
+import SkyFarmBot from "../SkyFarmBot/SkyFarmBot"
 const About = () => {
   return (
     <div className="about-container bg-primary min-h-screen p-8 flex flex-col items-center justify-center relative">
       {" "}
       {/* Add relative positioning */}
       <div className=" absolute top-5 left-5">
-    <Menu /> {/* Add the Menu component here */}
-      
-      </div >
-  
+        <Menu /> {/* Add the Menu component here */}
+      </div>
       {/* Neon Title with Subtle Glow Effect */}
       <h1 className="text-5xl font-extrabold text-center mb-6 text-neon-green glow-effect animate-glow-pulse">
         Sky Farm Analytics
@@ -48,6 +46,7 @@ const About = () => {
       >
         Contact Us
       </a>
+      <SkyFarmBot />
     </div>
   );
 };

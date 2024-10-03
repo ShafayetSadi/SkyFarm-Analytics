@@ -1,6 +1,6 @@
 import React from "react";
 import Menu from "../../components/Menu/Menu"; // Assuming Menu component has the hamburger menu
-
+import SkyFarmBot from "../SkyFarmBot/SkyFarmBot"; 
 const Contact = () => {
   return (
     <div className="Contact_page">
@@ -54,6 +54,7 @@ const Contact = () => {
           </button>
         </form>
       </div>
+       <SkyFarmBot />
     </div>
   );
 };

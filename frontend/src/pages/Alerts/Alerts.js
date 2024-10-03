@@ -5,7 +5,7 @@ import WaterLevel from "../../components/WaterLevel/WaterLevel";
 import flooddata from "./Alerts.json"; // Import the JSON data
 import { Link } from "react-router-dom"; // Ensure you have react-router-dom for navigation
 import Menu from "../../components/Menu/Menu"; // Import the Menu component
-
+import SkyFarmBot from "../SkyFarmBot/SkyFarmBot"; // Import the SkyFarmBot component
 const Alerts = () => {
   const [alerts] = useState(flooddata.alerts); // Accessing alerts from the JSON structure
   const [searchTerm, setSearchTerm] = useState(""); // State for search input
@@ -32,7 +32,6 @@ const Alerts = () => {
         {/* Hamburger Menu */}
         <Menu />
       </div>
-
       <div className="neon-rain"></div> {/* Futuristic neon rain background */}
       <h1 className="text-5xl font-bold mb-6 text-neon-blue text-center glow-effect">
         Active Flood Alerts
@@ -63,6 +62,7 @@ const Alerts = () => {
           </p>
         )}
       </div>
+      <SkyFarmBot />
     </div>
   );
 };

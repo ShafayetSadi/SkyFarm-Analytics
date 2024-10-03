@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom"; // Ensure you have react-router-dom for navigation
 import "./research.css";
 import Menu from "../../components/Menu/Menu"; // Import the Menu component
-
+import SkyFarmBot from "../../pages/SkyFarmBot/SkyFarmBot"; // Import the SkyFarmBot component
 const Research = () => {
   const researchData = [
     {
@@ -59,8 +59,8 @@ const Research = () => {
       </div>
       <h1 className="text-4xl font-bold text-center bg-gradient-to-r from-cyan-400 to-cyan-500 text-transparent bg-clip-text mb-12 animate-float">
         Research on Climate Change and Its Effect
-      </h1> 
-{/* comment */}
+      </h1>
+      {/* comment */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
         {researchData.map((research, index) => (
           <div
@@ -89,6 +89,7 @@ const Research = () => {
           </div>
         ))}
       </div>
+      <SkyFarmBot />
     </div>
   );
 };
