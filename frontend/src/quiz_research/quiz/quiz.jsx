@@ -38,10 +38,10 @@ const Quiz = () => {
 
   return (
     <div className="container bg-gray-900 text-gray-200 min-h-screen p-6 flex flex-col items-center justify-center">
-      <h1 className="text-3xl font-bold mb-4 text-green-400">
+      <h1 className="text-3xl font-bold mb-4 text-neon-blue">
         {quizData.quizTitle}
       </h1>
-      <hr className="w-full mb-4 border-green-400" />
+      <hr className="w-full mb-4 border-neon-blue" />
       {!showResult ? (
         <>
           <h2 className="text-xl font-semibold mb-6">
@@ -54,7 +54,7 @@ const Quiz = () => {
                 className={`p-4 rounded-lg cursor-pointer text-center transition-colors duration-200 
                   ${
                     selectedOption === option && isCorrect === true
-                      ? "bg-green-500 text-white"
+                      ? "bg-blue-600 text-white"
                       : ""
                   } 
                   ${
@@ -72,11 +72,11 @@ const Quiz = () => {
           <button
             onClick={handleNextQuestion}
             disabled={!selectedOption}
-            className={`mt-6 px-6 py-3 bg-green-500 text-gray-900 font-semibold rounded-lg shadow-md transition-all duration-300 
+            className={`mt-6 px-6 py-3 bg-neonBlue text-gray-900 font-semibold rounded-lg shadow-md transition-all duration-300 
               ${
                 !selectedOption
                   ? "opacity-50 cursor-not-allowed"
-                  : "hover:bg-green-600"
+                  : "hover:bg-blue-600"
               }`}
           >
             Next
@@ -88,8 +88,8 @@ const Quiz = () => {
       ) : (
         // Result modal is shown after quiz ends
         <div className="fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center z-50">
-          <div className="bg-gray-800 text-center p-8 rounded-lg shadow-lg border border-cyan-400 max-w-lg w-full animate-glow">
-            <h2 className="text-4xl font-bold text-cyan-400 mb-4">
+          <div className="bg-gray-800 text-center p-8 rounded-lg shadow-lg border border-neon-blue max-w-lg w-full animate-glow">
+            <h2 className="text-4xl font-bold text-neon-blue mb-4">
               Quiz Completed!
             </h2>
             <p className="text-2xl text-gray-200 mb-6">
@@ -97,7 +97,7 @@ const Quiz = () => {
             </p>
             <button
               onClick={handleBackToHome}
-              className="px-8 py-3 bg-cyan-500 text-gray-900 font-semibold rounded-lg shadow-md hover:bg-cyan-600 transition-all duration-300"
+              className="px-8 py-3 bg-neonBlue text-gray-900 font-semibold rounded-lg shadow-md hover:bg-blue-600 transition-all duration-300"
             >
               Back to Home
             </button>

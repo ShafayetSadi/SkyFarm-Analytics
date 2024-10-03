@@ -6,13 +6,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "#1c1c1e",  // Dark background color
+        primary: "#1c1c1e", // Dark background color
         secondary: "#2a2a2c", // Slightly lighter background color
-        accent: "#0bc5ea",    // Cyan for buttons, links, or important highlights
+        accent: "#0bc5ea", // Cyan for buttons, links, or important highlights
         highlight: "#34d399", // Green highlight color
-        danger: "#ef4444",    // Red for warnings or alerts
+        danger: "#ef4444", // Red for warnings or alerts
         lightText: "#e5e7eb", // Light text color for readability on dark backgrounds
-        darkText: "#374151",  // Dark text for contrast on lighter areas
+        darkText: "#374151", // Dark text for contrast on lighter areas
+        neonBlue: "#00f7ff", // Neon blue color for glow effects and accents
       },
       animation: {
         "fade-in-delay": "fadeIn 2s ease-in-out 0.5s forwards",

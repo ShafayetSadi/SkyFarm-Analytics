@@ -38,7 +38,36 @@
   animation: glow 2s infinite;
 }
 
-/* Text styling */
+/* Text styling *//* Neon Blue color */
+.text-neon-blue {
+  color: #00f7ff; /* Neon Blue */
+}
+
+.border-neon-blue {
+  border-color: #00f7ff;
+}
+
+.bg-neon-blue {
+  background-color: #00f7ff;
+}
+
+.hover\:bg-blue-600:hover {
+  background-color: #00c2cc;
+}
+
+/* Glowing animation */
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 10px rgba(0, 247, 255, 0.3), 0 0 20px rgba(0, 247, 255, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(0, 247, 255, 0.7), 0 0 30px rgba(0, 247, 255, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(0, 247, 255, 0.3), 0 0 20px rgba(0, 247, 255, 0.2);
+  }
+}
+
 .text-cyan-400 {
   color: #00ffff; /* Neon Cyan */
 }
