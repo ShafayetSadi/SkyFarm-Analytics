@@ -26,44 +26,59 @@ const Home = () => {
 
         {/* Scroll Down Button */}
         <button onClick={scrollToSection} className="scroll-button">
-          <span className="arrow-down">&#x2193;</span>{" "}
-          {/* Unicode arrow down */}
+          <span className="arrow-down">&#x2193;</span>
         </button>
       </div>
+      <div className="skyfarm-container_info-section ">
+        {/* New Sky Farm Analytics Section with moving space background */}
+        <div className="skyfarm-container">
+          <h2>About Sky Farm Analytics</h2>
+          <p>
+            Sky Farm Analytics is an innovative platform that provides real-time
+            insights into climate data, weather patterns, and flood risks. Our
+            goal is to equip communities with the information they need to
+            respond proactively to environmental challenges.
+          </p>
+        </div>
 
-      {/* Info Section with alternating positions for each InfoBox */}
-      <div className="info-section glow-background flex flex-col gap-6 px-8">
-        <div className="flex justify-start w-full">
-          <InfoBox position="home" className="bg-secondary text-lightText" />
+        {/* Info Section with alternating positions for each InfoBox */}
+        <div className="info-section glow-background flex flex-col gap-6 px-8">
+          {/* Reordered InfoBoxes */}
+          <div className="flex justify-end w-full">
+            <InfoBox
+              position="floodMap"
+              className="bg-secondary text-lightText"
+            />
+          </div>
+          <div className="flex justify-start w-full">
+            <InfoBox
+              position="alerts"
+              className="bg-secondary text-lightText"
+            />
+          </div>
+          <div className="flex justify-end w-full">
+            <InfoBox position="quiz" className="bg-secondary text-lightText" />
+          </div>
+          <div className="flex justify-start w-full">
+            <InfoBox
+              position="research"
+              className="bg-secondary text-lightText"
+            />
+          </div>
+          <div className="flex justify-end w-full">
+            <InfoBox position="about" className="bg-secondary text-lightText" />
+          </div>
+          <div className="flex justify-start w-full">
+            <InfoBox
+              position="contact"
+              className="bg-secondary text-lightText"
+            />
+          </div>
         </div>
-        <div className="flex justify-end w-full">
-          <InfoBox position="about" className="bg-secondary text-lightText" />
-        </div>
-        <div className="flex justify-start w-full">
-          <InfoBox position="alerts" className="bg-secondary text-lightText" />
-        </div>
-        <div className="flex justify-end w-full">
-          <InfoBox
-            position="floodMap"
-            className="bg-secondary text-lightText"
-          />
-        </div>
-        <div className="flex justify-start w-full">
-          <InfoBox position="contact" className="bg-secondary text-lightText" />
-        </div>
-        <div className="flex justify-end w-full">
-          <InfoBox position="quiz" className="bg-secondary text-lightText" />
-        </div>
-        <div className="flex justify-start w-full">
-          <InfoBox
-            position="research"
-            className="bg-secondary text-lightText"
-          />
-        </div>
+
+        {/* Background Space Image */}
+        <div className="space-background"></div>
       </div>
-
-      {/* Background Space Image */}
-      <div className="space-background"></div>
     </div>
   );
 };

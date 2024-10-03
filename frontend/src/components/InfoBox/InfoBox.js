@@ -8,17 +8,20 @@ const InfoBox = ({ position }) => {
   const [index, setIndex] = useState(0);
 
   const fullTexts = {
-    home: "Welcome to our Flood Risk Management Platform. Explore our tools to help you stay safe from floods.",
-    about: "Learn more about our mission to revolutionize flood prevention and provide essential services to keep you safe.",
-    alerts: "Stay updated with real-time flood alerts in your area, ensuring you have the latest information at your fingertips.",
-    floodMap: "Visualize flood data on our real-time interactive map and understand the risks in your area.",
-    contact: "Need assistance or have any questions? Contact us for support and more information.",
+    about:
+      "Learn more about our mission to revolutionize flood prevention and provide essential services to keep you safe.",
+    alerts:
+      "Stay updated with real-time flood alerts in your area, ensuring you have the latest information at your fingertips.",
+    floodMap:
+      "Visualize flood data on our real-time interactive map and understand the risks in your area.",
+    contact:
+      "Need assistance or have any questions? Contact us for support and more information.",
     quiz: "Test your flood knowledge with our interactive quiz and enhance your preparedness for emergencies.",
-    research: "Explore the latest research on flood risks, climate change, and prevention strategies.",
+    research:
+      "Explore the latest research on flood risks, climate change, and prevention strategies.",
   };
 
   const titles = {
-    home: "Welcome to Flood Management Platform",
     about: "About Our Mission",
     alerts: "Real-Time Alerts",
     floodMap: "Explore the Flood Map",
@@ -28,7 +31,6 @@ const InfoBox = ({ position }) => {
   };
 
   const links = {
-    home: "/",
     about: "/about",
     alerts: "/alerts",
     floodMap: "/floodmap",
@@ -38,7 +40,6 @@ const InfoBox = ({ position }) => {
   };
 
   const buttonTexts = {
-    home: "Learn More About Us",
     about: "Read About Us",
     alerts: "Get Alerts Now",
     floodMap: "View the Flood Map",
