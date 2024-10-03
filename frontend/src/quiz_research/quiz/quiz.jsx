@@ -7,6 +7,7 @@ const Quiz = () => {
   const [selectedOption, setSelectedOption] = useState(null);
   const [isCorrect, setIsCorrect] = useState(null);
   const [score, setScore] = useState(0);
+  const [showResult, setShowResult] = useState(false); // State to manage the result modal visibility
   const navigate = useNavigate(); // Initialize navigate for redirection
 
   const currentQuestion = quizData.questions[currentQuestionIndex];
@@ -27,9 +28,7 @@ const Quiz = () => {
     if (currentQuestionIndex < quizData.questions.length - 1) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
     } else {
-      alert(
-        `Quiz Finished! Your score is ${score}/${quizData.questions.length}`
-      );
+      setShowResult(true); // Show result when quiz ends
     }
   };
 
@@ -43,52 +42,68 @@ const Quiz = () => {
         {quizData.quizTitle}
       </h1>
       <hr className="w-full mb-4 border-green-400" />
-      <h2 className="text-xl font-semibold mb-6">{currentQuestion.question}</h2>
-      <ul className="space-y-4 w-full max-w-lg">
-        {currentQuestion.options.map((option, index) => (
-          <li
-            key={index}
-            className={`p-4 rounded-lg cursor-pointer text-center transition-colors duration-200 
+      {!showResult ? (
+        <>
+          <h2 className="text-xl font-semibold mb-6">
+            {currentQuestion.question}
+          </h2>
+          <ul className="space-y-4 w-full max-w-lg">
+            {currentQuestion.options.map((option, index) => (
+              <li
+                key={index}
+                className={`p-4 rounded-lg cursor-pointer text-center transition-colors duration-200 
+                  ${
+                    selectedOption === option && isCorrect === true
+                      ? "bg-green-500 text-white"
+                      : ""
+                  } 
+                  ${
+                    selectedOption === option && isCorrect === false
+                      ? "bg-red-500 text-white"
+                      : "bg-gray-800 hover:bg-gray-700"
+                  }
+                `}
+                onClick={() => handleOptionClick(option)}
+              >
+                {option}
+              </li>
+            ))}
+          </ul>
+          <button
+            onClick={handleNextQuestion}
+            disabled={!selectedOption}
+            className={`mt-6 px-6 py-3 bg-green-500 text-gray-900 font-semibold rounded-lg shadow-md transition-all duration-300 
               ${
-                selectedOption === option && isCorrect === true
-                  ? "bg-green-500 text-white"
-                  : ""
-              } 
-              ${
-                selectedOption === option && isCorrect === false
-                  ? "bg-red-500 text-white"
-                  : "bg-gray-800 hover:bg-gray-700"
-              }
-            `}
-            onClick={() => handleOptionClick(option)}
+                !selectedOption
+                  ? "opacity-50 cursor-not-allowed"
+                  : "hover:bg-green-600"
+              }`}
           >
-            {option}
-          </li>
-        ))}
-      </ul>
-      <button
-        onClick={handleNextQuestion}
-        disabled={!selectedOption}
-        className={`mt-6 px-6 py-3 bg-green-500 text-gray-900 font-semibold rounded-lg shadow-md transition-all duration-300 
-          ${
-            !selectedOption
-              ? "opacity-50 cursor-not-allowed"
-              : "hover:bg-green-600"
-          }`}
-      >
-        Next
-      </button>
-      <div className="mt-4 text-gray-400">
-        {currentQuestionIndex + 1} of {quizData.questions.length} questions
-      </div>
-
-      {/* Back to Home Button */}
-      <button
-        onClick={handleBackToHome}
-        className="mt-6 px-6 py-3 bg-blue-500 text-gray-900 font-semibold rounded-lg shadow-md transition-all duration-300 hover:bg-blue-600"
-      >
-        Back to Home
-      </button>
+            Next
+          </button>
+          <div className="mt-4 text-gray-400">
+            {currentQuestionIndex + 1} of {quizData.questions.length} questions
+          </div>
+        </>
+      ) : (
+        // Result modal is shown after quiz ends
+        <div className="fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center z-50">
+          <div className="bg-gray-800 text-center p-8 rounded-lg shadow-lg border border-cyan-400 max-w-lg w-full animate-glow">
+            <h2 className="text-4xl font-bold text-cyan-400 mb-4">
+              Quiz Completed!
+            </h2>
+            <p className="text-2xl text-gray-200 mb-6">
+              Your score: {score}/{quizData.questions.length}
+            </p>
+            <button
+              onClick={handleBackToHome}
+              className="px-8 py-3 bg-cyan-500 text-gray-900 font-semibold rounded-lg shadow-md hover:bg-cyan-600 transition-all duration-300"
+            >
+              Back to Home
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
