@@ -1,0 +1,104 @@
+{
+  "alerts": [
+    {
+      "title": "Severe Flood Warning",
+      "description": "Heavy rainfall has led to rising water levels. Evacuate low-lying areas.",
+      "issued": "2024-10-03",
+      "region": "Bangladesh",
+      "country": "Bangladesh",
+      "district": "Bagerhat",
+      "currentLevel": 3,
+      "dangerLevel": 5
+    },
+    {
+      "title": "Landslide Risk Alert",
+      "description": "Increased risk of landslides due to continuous rainfall in hilly regions.",
+      "issued": "2024-10-02",
+      "region": "Bangladesh",
+      "country": "Bangladesh",
+      "district": "Bandarban",
+      "currentLevel": 4,
+      "dangerLevel": 6
+    },
+    {
+      "title": "Flood Alert",
+      "description": "Flooding expected in the next 24 hours. Stay updated on local weather conditions.",
+      "issued": "2024-10-01",
+      "region": "Bangladesh",
+      "country": "Bangladesh",
+      "district": "Brahmanbaria",
+      "currentLevel": 2,
+      "dangerLevel": 4
+    },
+    {
+      "title": "Torrential Rain Warning",
+      "description": "Torrential rains are expected to continue, leading to possible flooding.",
+      "issued": "2024-09-30",
+      "region": "Bangladesh",
+      "country": "Bangladesh",
+      "district": "Chandpur",
+      "currentLevel": 5,
+      "dangerLevel": 8
+    },
+    {
+      "title": "High Water Level Advisory",
+      "description": "Residents in low-lying areas should remain vigilant as water levels rise.",
+      "issued": "2024-09-29",
+      "region": "Bangladesh",
+      "country": "Bangladesh",
+      "district": "Chattogram",
+      "currentLevel": 6,
+      "dangerLevel": 10
+    },
+    {
+      "title": "Flooding Alert",
+      "description": "Flooding reported in several areas. Follow local news for updates.",
+      "issued": "2024-09-28",
+      "region": "Bangladesh",
+      "country": "Bangladesh",
+      "district": "Chuadanga",
+      "currentLevel": 3,
+      "dangerLevel": 5
+    },
+    {
+      "title": "Coastal Erosion Warning",
+      "description": "Coastal areas at risk of erosion due to high tide and rough seas.",
+      "issued": "2024-09-27",
+      "region": "Bangladesh",
+      "country": "Bangladesh",
+      "district": "Cox's Bazar",
+      "currentLevel": 7,
+      "dangerLevel": 12
+    },
+    {
+      "title": "Severe Weather Advisory",
+      "description": "Severe weather conditions expected in the region. Prepare for potential flooding.",
+      "issued": "2024-09-26",
+      "region": "Bangladesh",
+      "country": "Bangladesh",
+      "district": "Cumilla",
+      "currentLevel": 4,
+      "dangerLevel": 7
+    },
+    {
+      "title": "Flash Flood Warning",
+      "description": "Flash floods expected due to heavy rainfall in upstream areas.",
+      "issued": "2024-09-25",
+      "region": "Bangladesh",
+      "country": "Bangladesh",
+      "district": "Dhaka",
+      "currentLevel": 8,
+      "dangerLevel": 15
+    },
+    {
+      "title": "Flood Risk Notification",
+      "description": "Monitor weather updates. Flood risk remains high in certain districts.",
+      "issued": "2024-09-24",
+      "region": "Bangladesh",
+      "country": "Bangladesh",
+      "district": "Dinajpur",
+      "currentLevel": 3,
+      "dangerLevel": 6
+    }
+  ]
+}
