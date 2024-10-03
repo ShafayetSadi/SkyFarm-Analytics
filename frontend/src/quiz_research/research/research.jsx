@@ -57,7 +57,7 @@ const Research = () => {
       <div className=" absolute top-5 left-5">
         <Menu />
       </div>
-      <h1 className="text-4xl font-bold text-center bg-gradient-to-r from-green-400 to-blue-500 text-transparent bg-clip-text mb-12 animate-float">
+      <h1 className="text-4xl font-bold text-center bg-gradient-to-r from-cyan-400 to-cyan-500 text-transparent bg-clip-text mb-12 animate-float">
         Research on Climate Change and Its Effect
       </h1> 
 {/* comment */}
@@ -81,7 +81,7 @@ const Research = () => {
                 href={research.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="card-link text-green-400 hover:text-green-600"
+                className="card-link text-cyan-400 hover:text-cyan-600"
               >
                 Learn More
               </a>

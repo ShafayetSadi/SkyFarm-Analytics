@@ -24,7 +24,7 @@ const FloodMap = () => {
           ></iframe>
 
           {/* Overlay */}
-          <div className="overlay bg-gray-900 text-center text-4xl pt-10 font-bold text-blue-500">
+          <div className="overlay bg-gray-900 text-center text-4xl pt-10 font-bold text-cyan-500">
             Real-Time Data
           </div>
 
