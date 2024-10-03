@@ -31,7 +31,11 @@ const SkyFarmBot = () => {
     }, []);
 
     return (
+<<<<<<< HEAD
         <div>
+=======
+        <div style={{ width: '0px', height: '0px'}}>
+>>>>>>> 1374c81d5efc7cf500cf6c21ab361a1442462187
             {/* Botpress chatbot */}
         </div>
     );
