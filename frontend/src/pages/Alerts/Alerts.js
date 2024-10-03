@@ -3,6 +3,7 @@ import "./Alerts.css";
 import AlertCard from "../../components/AlertCard/AlertCard";
 import WaterLevel from "../../components/WaterLevel/WaterLevel";
 import flooddata from "./Alerts.json"; // Import the JSON data
+import { Link } from "react-router-dom"; // Ensure you have react-router-dom for navigation
 
 const Alerts = () => {
   const [alerts] = useState(flooddata.alerts); // Accessing alerts from the JSON structure
@@ -26,6 +27,23 @@ const Alerts = () => {
 
   return (
     <div className="container mx-auto p-6 bg-dark-futuristic min-h-screen relative">
+      <Link to="/" className="home-icon">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="icon icon-tabler icon-tabler-home"
+          width="36"
+          height="36"
+          viewBox="0 0 24 24"
+          strokeWidth="2"
+          stroke="currentColor"
+          fill="none"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M3 9l9 -6l9 6v11a2 2 0 0 1 -2 2h-4a2 2 0 0 1 -2 -2v-7h-4v7a2 2 0 0 1 -2 2h-4a2 2 0 0 1 -2 -2z" />
+        </svg>
+      </Link>
       <div className="neon-rain"></div> {/* Futuristic neon rain background */}
       <h1 className="text-5xl font-bold mb-6 text-neon-blue text-center glow-effect">
         Active Flood Alerts

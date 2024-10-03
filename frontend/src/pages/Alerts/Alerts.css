@@ -145,3 +145,16 @@
 .search-bar:focus {
   box-shadow: 0px 0px 20px rgba(0, 255, 255, 0.7);
 }
+
+
+.home-icon {
+  position: absolute;
+  top: 5.3%; /* Adjust position from the top */
+  left: 5%; /* Adjust position from the left */
+  color: #4ff9ff; /* Icon color */
+  transition: transform 0.3s; /* Smooth hover effect */
+}
+
+.home-icon:hover {
+  transform: scale(1.1); /* Scale up effect on hover */
+}
