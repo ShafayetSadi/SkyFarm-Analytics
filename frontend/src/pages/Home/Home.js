@@ -76,6 +76,12 @@ const Home = () => {
           </div>
           <div className="flex justify-start w-full">
             <InfoBox
+                position="skyfarmai"
+                className="bg-secondary text-lightText"
+            />
+          </div>
+          <div className="flex justify-end w-full">
+            <InfoBox
                 position="contact"
                 className="bg-secondary text-lightText"
             />

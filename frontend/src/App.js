@@ -6,6 +6,8 @@ import About from "./pages/About/About";
 import Alerts from "./pages/Alerts/Alerts";
 import FloodMap from "./pages/FloodMap/FloodMap";
 import Weather from "./pages/Weather/Weather";
+import SkyFarmBot from "./pages/SkyFarmBot/SkyFarmBot";
+import SkyFarmAI from "./pages/SkyFarmAI/SkyFarmAI";
 import Contact from "./pages/Contact/Contact";
 import NotFound from "./pages/NotFound/NotFound";
 import Header from "./components/Header/Header";
@@ -30,12 +32,14 @@ function App() {
             <Route path="/alerts" element={<Alerts />} />
             <Route path="/weather" element={<Weather />} />
             <Route path="/floodmap" element={<FloodMap />} />
+            <Route path="/skyfarmai" element={<SkyFarmAI />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/quiz" element={<Quiz />} />
             <Route path="research" element={<Research />} />
             <Route path="*" element={<NotFound />} />
             
           </Routes>
+          <SkyFarmBot />
         </main>
 
 

@@ -20,6 +20,8 @@ const InfoBox = ({ position }) => {
     quiz: "Test your flood knowledge with our interactive quiz and enhance your preparedness for emergencies.",
     research:
       "Explore the latest research on flood risks, climate change, and prevention strategies.",
+    skyfarmai:
+        "Discover the power of AI and machine learning in predicting and mitigating flood risks.",
   };
 
   const titles = {
@@ -30,6 +32,7 @@ const InfoBox = ({ position }) => {
     contact: "Get in Touch",
     quiz: "Test Your Flood Knowledge",
     research: "Discover Our Research",
+    skyfarmai: "Sky Farm AI",
   };
 
   const links = {
@@ -40,6 +43,7 @@ const InfoBox = ({ position }) => {
     contact: "/contact",
     quiz: "/quiz",
     research: "/research",
+    skyfarmai: "/skyfarmai",
   };
 
   const buttonTexts = {
@@ -50,6 +54,7 @@ const InfoBox = ({ position }) => {
     contact: "Contact Us",
     quiz: "Take the Quiz",
     research: "Explore Our Research",
+    skyfarmai: "Chat with Sky Farm AI",
   };
 
   const { ref, inView } = useInView({
