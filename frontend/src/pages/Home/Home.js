@@ -12,13 +12,13 @@ const Home = () => {
   };
 
   return (
-    <div className="relative w-full bg-primary text-lightText font-mono">
+    <div className="relative w-full bg-primary text-lightText font-semibold">
       {/* Earth Model Section */}
       <div className="earth-container relative">
         {/* Welcome Message */}
-        <div className="welcome-message">
-          <h1>Welcome to Sky Farm Analytics</h1>
-          <p>Find live weather and flood updates</p>
+        <div className="welcome-message ">
+          <h1>Welcome to SkyFarm Analytics</h1>
+          <p>Your gateway to real-time weather insights and flood tracking.</p>
         </div>
 
         {/* Earth Model */}
@@ -46,44 +46,44 @@ const Home = () => {
           {/* Reordered InfoBoxes */}
           <div className="flex justify-start w-full">
             <InfoBox
-                position="weather"
-                className="bg-secondary text-lightText"
+              position="weather"
+              className="bg-secondary text-lightText"
             />
           </div>
           <div className="flex justify-end w-full">
             <InfoBox
-                position="floodMap"
-                className="bg-secondary text-lightText"
+              position="floodMap"
+              className="bg-secondary text-lightText"
             />
           </div>
           <div className="flex justify-start w-full">
             <InfoBox
-                position="alerts"
-                className="bg-secondary text-lightText"
+              position="alerts"
+              className="bg-secondary text-lightText"
             />
           </div>
           <div className="flex justify-end w-full">
-            <InfoBox position="quiz" className="bg-secondary text-lightText"/>
+            <InfoBox position="quiz" className="bg-secondary text-lightText" />
           </div>
           <div className="flex justify-start w-full">
             <InfoBox
-                position="research"
-                className="bg-secondary text-lightText"
+              position="research"
+              className="bg-secondary text-lightText"
             />
           </div>
           <div className="flex justify-end w-full">
-            <InfoBox position="about" className="bg-secondary text-lightText"/>
+            <InfoBox position="about" className="bg-secondary text-lightText" />
           </div>
           <div className="flex justify-start w-full">
             <InfoBox
-                position="skyfarmai"
-                className="bg-secondary text-lightText"
+              position="skyfarmai"
+              className="bg-secondary text-lightText"
             />
           </div>
           <div className="flex justify-end w-full">
             <InfoBox
-                position="contact"
-                className="bg-secondary text-lightText"
+              position="contact"
+              className="bg-secondary text-lightText"
             />
           </div>
         </div>
