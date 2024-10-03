@@ -44,34 +44,40 @@ const Home = () => {
         {/* Info Section with alternating positions for each InfoBox */}
         <div className="info-section glow-background flex flex-col gap-6 px-8">
           {/* Reordered InfoBoxes */}
+          <div className="flex justify-start w-full">
+            <InfoBox
+                position="weather"
+                className="bg-secondary text-lightText"
+            />
+          </div>
           <div className="flex justify-end w-full">
             <InfoBox
-              position="floodMap"
-              className="bg-secondary text-lightText"
+                position="floodMap"
+                className="bg-secondary text-lightText"
             />
           </div>
           <div className="flex justify-start w-full">
             <InfoBox
-              position="alerts"
-              className="bg-secondary text-lightText"
+                position="alerts"
+                className="bg-secondary text-lightText"
             />
           </div>
           <div className="flex justify-end w-full">
-            <InfoBox position="quiz" className="bg-secondary text-lightText" />
+            <InfoBox position="quiz" className="bg-secondary text-lightText"/>
           </div>
           <div className="flex justify-start w-full">
             <InfoBox
-              position="research"
-              className="bg-secondary text-lightText"
+                position="research"
+                className="bg-secondary text-lightText"
             />
           </div>
           <div className="flex justify-end w-full">
-            <InfoBox position="about" className="bg-secondary text-lightText" />
+            <InfoBox position="about" className="bg-secondary text-lightText"/>
           </div>
           <div className="flex justify-start w-full">
             <InfoBox
-              position="contact"
-              className="bg-secondary text-lightText"
+                position="contact"
+                className="bg-secondary text-lightText"
             />
           </div>
         </div>

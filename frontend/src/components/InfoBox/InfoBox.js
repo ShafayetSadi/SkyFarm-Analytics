@@ -8,6 +8,7 @@ const InfoBox = ({ position }) => {
   const [index, setIndex] = useState(0);
 
   const fullTexts = {
+    weather: "Get the latest weather updates and forecasts in your area.",
     about:
       "Learn more about our mission to revolutionize flood prevention and provide essential services to keep you safe.",
     alerts:
@@ -25,6 +26,7 @@ const InfoBox = ({ position }) => {
     about: "About Our Mission",
     alerts: "Real-Time Alerts",
     floodMap: "Explore the Flood Map",
+    weather: "Weather Updates",
     contact: "Get in Touch",
     quiz: "Test Your Flood Knowledge",
     research: "Discover Our Research",
@@ -34,6 +36,7 @@ const InfoBox = ({ position }) => {
     about: "/about",
     alerts: "/alerts",
     floodMap: "/floodmap",
+    weather: "/weather",
     contact: "/contact",
     quiz: "/quiz",
     research: "/research",
@@ -43,6 +46,7 @@ const InfoBox = ({ position }) => {
     about: "Read About Us",
     alerts: "Get Alerts Now",
     floodMap: "View the Flood Map",
+    weather: "Check the Weather",
     contact: "Contact Us",
     quiz: "Take the Quiz",
     research: "Explore Our Research",

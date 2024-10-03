@@ -5,6 +5,7 @@ import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import Alerts from "./pages/Alerts/Alerts";
 import FloodMap from "./pages/FloodMap/FloodMap";
+import Weather from "./pages/Weather/Weather";
 import Contact from "./pages/Contact/Contact";
 import NotFound from "./pages/NotFound/NotFound";
 import Header from "./components/Header/Header";
@@ -27,6 +28,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/alerts" element={<Alerts />} />
+            <Route path="/weather" element={<Weather />} />
             <Route path="/floodmap" element={<FloodMap />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/quiz" element={<Quiz />} />
