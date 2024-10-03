@@ -80,21 +80,21 @@ const InfoBox = ({ position }) => {
   return (
     <div
       ref={ref}
-      className={`info-box bg-opacity-80 p-6 bg-black/70 rounded-lg shadow-lg border-4 mb-6 transition-transform transform hover:scale-105 hover:border-cyan-400 ${
+      className={`info-box bg-opacity-80 p-6 bg-black/70 rounded-lg shadow-lg border-4 mb-6 transition-transform transform hover:scale-105 hover:border-[#00FFFF] ${
         position === "left"
           ? "border-l-cyan-500 animate-slide-left self-start"
           : "border-r-cyan-500 animate-slide-right self-end"
       } glow ${inView ? "in-view" : "opacity-0"}`}
     >
       {/* Title */}
-      <h2 className="text-xl font-bold text-cyan-400">{titles[position]}</h2>
+      <h2 className="text-xl font-bold text-[#00FFFF]">{titles[position]}</h2>
 
       {/* Typing text */}
       <p className="text-base mt-3 text-gray-200 typing-text">{text}</p>
 
       {/* Call-to-action button */}
       <Link to={links[position]}>
-        <button className="  transition ease-in-out  mt-5 py-3 px-6 bg-cyan-600 rounded-md text-white shadow-md hover:bg-gradient-to-r from-cyan-500 to-cyan-700 hover:shadow-cyan-500/50 transition-all">
+        <button className="  transition ease-in-out  mt-5 py-3 px-6 bg-[#07b0b0] rounded-md text-white shadow-md hover:bg-gradient-to-r from-cyan-500 to-cyan-700 hover:shadow-cyan-500/50 transition-all">
           {buttonTexts[position]}
         </button>
       </Link>
