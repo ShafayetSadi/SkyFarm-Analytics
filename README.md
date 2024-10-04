@@ -73,6 +73,13 @@ SkyFarm Analytics fetches real-time and historical data from reliable flood moni
 - **OrbitControls** for intuitive user navigation around the 3D Earth model.
 - **APIs** (NASA GFMS, NOAA) for real-time flood alerts and historical data.
 - **CSS & Tailwind** for responsive, accessible design.
+- **Botpress Webchat** for interactive chat integration.
+- **Axios** for making HTTP requests.
+- **Leaflet** for mapping and geolocation features.
+- **React Markdown** for rendering markdown content.
+- **Recharts** for visualizing data in charts.
+- **Font Awesome icons** for adding icons to the interface.
+- **React Intersection Observer** for handling element visibility.
 
 ## **<font color="skyblue">🔮 Future Enhancements</font>**
 
@@ -91,9 +98,6 @@ Contributions are welcome! To contribute:
 4. Push to the branch (git push origin feature/YourFeature).
 5. Create a pull request.
 
-## **<font color="skyblue">📄 License</font>**
-
-This project is licensed under the MIT License. See the LICENSE file for more details.
 
 ## **<font color="skyblue">🌍 Live Demo</font>**
 
