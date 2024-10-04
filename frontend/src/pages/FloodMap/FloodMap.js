@@ -2,7 +2,7 @@ import React from "react";
 import Menu from "../../components/Menu/Menu"; // Import the Menu component
 import "./FloodMap.css";
 import SkyFarmBot from "../SkyFarmBot/SkyFarmBot"; // Import the SkyFarmBot component
-const FloodMap = () => {
+const FloodMap = () => { 
   return (
     <div className="floodMapContainer mx-auto p-6 text-gray-200 bg-gray-900 min-h-screen relative">
       {/* Hamburger Menu */}
