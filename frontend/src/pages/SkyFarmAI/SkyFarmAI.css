@@ -1,0 +1,62 @@
+.bpContainer {
+    display: flex;
+    height: 600px;
+    width: 800px;
+    overflow: scroll;
+    color: blue !important;
+    background-color: #101010 !important; /* Ensure this is applied */
+    border-color: #0b0e17;
+}
+
+.bpModalContainer {
+    overflow: scroll;
+}
+
+.bpHeaderContainer {
+    background-color: #15171a !important;
+    color: white;
+}
+
+.bpHeaderContentContainer:hover {
+    background-color: #101010 !important;
+}
+
+.bpMessageListContainer {
+    height: 400px;
+    overflow: scroll;
+}
+
+.bpMessageListViewport {
+    background-color: black;
+    height: 400px;
+    overflow: scroll;
+}
+
+.bpMessageBlocksBubble {
+    background-color: #004d4d !important;
+}
+
+.bpMessageBlocksTextText {
+    color: white;
+}
+
+.bpComposerContainer {
+    background-color: #15171a;
+    color: black;
+    border-color: #0b0e17;
+}
+
+.bpComposerInput {
+    background-color: #15171a;
+    color: white;
+    border-color: #0b0e17;
+}
+
+.bpComposerPoweredBy {
+    display: none;
+}
+
+.bpModalDialogContainer {
+    background-color: #15171a;
+    color: white;
+}

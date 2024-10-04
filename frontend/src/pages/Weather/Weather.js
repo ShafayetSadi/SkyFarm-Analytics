@@ -196,17 +196,17 @@ const data = data_.hourly.time.map((time, index) => ({
                 <div className=' absolute top-5 left-5'>
                     <Menu />
                 </div>
-                <section className="map-container">
+                <section className="">
 
-                    <div className="iframe-container mb-8">
-                        <h2 className="text-2xl font-semibold mb-4 text-green-400">
+                    <div className="mb-8">
+                        <h2 className="text-4xl font-bold mb-4 text-green-400 text-center">
                             SKYFARM ANALYTICS
                         </h2>
-                        <div className="overlay bg-gray-900 text-center text-4xl pt-10  font-bold text-cyan-500">
+                        <div className="h-8 bg-gray-900 text-center text-3xl font-semibold text-cyan-500">
                             Real-Time Weather Update
                         </div>
-                        <div className="mt-36">
-                        <ResponsiveContainer width="100%" height={500}>
+                        <div className="mt-4 flex justify-center">
+                        <ResponsiveContainer width="90%" height={500}>
                             <LineChart
                                 data={data}
                                 margin={{top: 10, right: 30, left: 0, bottom: 0}}
@@ -262,9 +262,9 @@ const data = data_.hourly.time.map((time, index) => ({
                             </LineChart>
                         </ResponsiveContainer>
                         </div>
+                        <ChatBot />
                     </div>
                 </section>
-                <ChatBot />
             </div>
         );
     };

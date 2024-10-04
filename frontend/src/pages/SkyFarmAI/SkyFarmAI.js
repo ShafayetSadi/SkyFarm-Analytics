@@ -4,6 +4,7 @@ import { getClient } from '@botpress/webchat';
 import { buildTheme } from "@botpress/webchat-generator";
 import { Container, Header, MessageList, Composer, WebchatProvider } from '@botpress/webchat';
 import "./SkyFarmAI.css"
+import botAvatar from "../../assets/botAvatar.png"
 
 const theme = buildTheme({
     palette: {
@@ -16,22 +17,18 @@ const theme = buildTheme({
 });
 
 const config = {
-    composerPlaceholder: "What would you like to know?",
-    botName: "Customer service",
-    botAvatar: "https://picsum.photos/200/300",
+    composerPlaceholder: "How can SkyFarm AI help my farm?",
+    botName: "SkyFarm AI",
+    botAvatar: botAvatar,
     botDescription:
     "SkyFarm AI harnesses NASA's Earth data to deliver real-time insights for farmers, helping optimize crop management, monitor land conditions, and boost productivity through advanced satellite analytics. Grow smarter with AI-powered precision farming!",
     email: {
-        title: "randomEmail@boptress.com",
-        link: "mailto:randomEmail@boptress.com",
-    },
-    phone: {
-        title: "555-555-5555",
-        link: "tel:555-555-5555",
+        title: "admin@skyfarmanalytics.com",
+        link: "mailto:admin@skyfarmanalytics.com",
     },
     website: {
-        title: "https://botpress.com",
-        link: "https://botpress.com",
+        title: "https://skyfarmanalytics.com",
+        link : "https://skyfarmanalytics.com",
     },
 };
 
@@ -47,7 +44,7 @@ const SkyFarmAI = () => {
             <header className="text-center text-2xl font-bold text-white mb-4">
                 SkyFarm AI Chatbot
             </header>
-            <section className="px-28">
+            <section className="px-28 flex justify-center">
                 <WebchatProvider
                     key={JSON.stringify(config)}
                     configuration={config}
