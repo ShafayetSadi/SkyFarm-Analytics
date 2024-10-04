@@ -1,6 +1,6 @@
 **<span style="color: orange;">🌍 SkyFarm Analytics</span>**
 
-Flood Tracker is an interactive tool designed to provide **real-time flood warnings**, **risk tracking**, and critical information for flood-prone areas. Using a 3D Earth model built with **Three.js**, this project visualizes flood data and alerts, helping users stay informed and prepared during flood emergencies.
+SkyFarm Analytics is an interactive tool designed to provide **real-time flood warnings**, **risk tracking**, and critical information for flood-prone areas. Using a 3D Earth model built with **Three.js**, this project visualizes flood data and alerts, helping users stay informed and prepared during flood emergencies.
 
 This project was built for the **NASA Space Apps Challenge**, with the goal of creating an impactful tool to monitor and mitigate flood-related risks globally.
 
@@ -10,7 +10,7 @@ This project was built for the **NASA Space Apps Challenge**, with the goal of c
 - Explore an interactive 3D model of the Earth with real-time flood alerts and risk zones. The model offers smooth navigation, zoom controls, and a realistic view of the planet.
 
 ### **<span style="color: LightPink;">Real-Time Flood Alerts</span>**
-- Integrating flood monitoring APIs (such as NASA's Global Flood Monitoring System), Flood Tracker provides live updates on flood warnings across the globe. Users can click on flood markers to view more detailed information about the affected regions.
+- Integrating flood monitoring APIs (such as NASA's Global Flood Monitoring System), SkyFarm Analytics provides live updates on flood warnings across the globe. Users can click on flood markers to view more detailed information about the affected regions.
 
 ### **<span style="color: LightPink;">Flood Risk Prediction</span>**
 - Using predictive modeling, the app offers insights into potential flood risks based on current weather conditions and historical data. Visualizations include probability levels and severity indicators.
@@ -19,7 +19,7 @@ This project was built for the **NASA Space Apps Challenge**, with the goal of c
 - Users can explore past flood events to identify patterns and recurring risks in certain regions, visualized directly on the 3D Earth model.
 
 ### **<span style="color: LightPink;">Geolocation & Personalized Alerts</span>**
-- Flood Tracker offers personalized alerts based on user location. Users can enter their location or enable geolocation to receive flood updates specific to their area.
+- SkyFarm Analytics offers personalized alerts based on user location. Users can enter their location or enable geolocation to receive flood updates specific to their area.
 
 ### **<span style="color: LightPink;">Safety Resources</span>**
 - Access a comprehensive list of safety tips, emergency contacts, and evacuation routes tailored to the user’s location, to stay prepared during emergencies.
@@ -27,36 +27,7 @@ This project was built for the **NASA Space Apps Challenge**, with the goal of c
 ### **<span style="color: LightPink;">Mobile-Optimized</span>**
 - The app is fully responsive, allowing users to access flood alerts and safety information from any device, including smartphones and tablets.
 
-## **<font color="skyblue">📦 Project Structure</font>**
 
-```
-├── public
-│   ├── assets
-│   │   ├── img
-│   │   │   ├── earthmap1k.jpg
-│   │   │   ├── earthbump.jpg
-│   │   │   ├── earthspec.jpg
-│   │   │   ├── earthCloud.png
-│   │   │   ├── galaxy.png
-│   ├── index.html
-│
-├── src
-│   ├── components
-│   │   ├── Header
-│   │   ├── Footer
-│   ├── pages
-│   │   ├── Home
-│   │   ├── About
-│   │   ├── Alerts
-│   │   ├── FloodMap
-│   │   ├── Contact
-│   ├── styles
-│   ├── App.js
-│   ├── index.js
-│
-├── README.md
-└── package.json
-```
 
 ## **<font color="skyblue">🛠️ Installation</font>**
 
@@ -65,13 +36,13 @@ To run this project locally, follow the steps below:
 1. **Clone the repository:**
 
     ```bash
-    git clone https://github.com/yourusername/flood-tracker.git
+    git clone https://github.com/sharif2552/SkyFarm-Analytics.git
     ```
 
 2. **Navigate to the project directory:**
 
     ```bash
-    cd flood-tracker
+    cd frontend
     ```
 
 3. **Install dependencies:**
@@ -90,7 +61,7 @@ The project will now be running on [http://localhost:3000](http://localhost:3000
 
 ## **<font color="skyblue">🌐 Data Sources</font>**
 
-Flood Tracker fetches real-time and historical data from reliable flood monitoring and meteorological APIs, including:
+SkyFarm Analytics fetches real-time and historical data from reliable flood monitoring and meteorological APIs, including:
 
 - NASA's Global Flood Monitoring System (GFMS)
 - NOAA Flood Warning API
@@ -126,13 +97,7 @@ This project is licensed under the MIT License. See the LICENSE file for more de
 
 ## **<font color="skyblue">🌍 Live Demo</font>**
 
-You can access the live demo of the Flood Tracker project at **Flood Tracker Live**.
+You can access the live demo of the SkyFarm Analytics project at **[SkyFarm Analytics Live](https://sky-farm-analytics.vercel.app/)**.
 
-## **<font color="skyblue">📧 Contact</font>**
 
-For questions, suggestions, or contributions, feel free to reach out:
-
-- **Email:** your.email@example.com
-- **GitHub:** yourusername
-
-Flood Tracker is designed to help mitigate flood risks and provide communities with the tools they need to stay informed. Together, we can make a difference by empowering people with the knowledge to stay safe.
+SkyFarm Analytics is designed to help mitigate flood risks and provide communities with the tools they need to stay informed. Together, we can make a difference by empowering people with the knowledge to stay safe.
