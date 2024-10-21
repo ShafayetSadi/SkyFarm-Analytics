@@ -22,12 +22,12 @@ const FloodMap = () => {
           ></iframe>
 
           {/* Overlay */}
-          <div className="overlay bg-gray-900 text-center text-4xl pt-20 font-bold text-cyan-500">
+          <div className="overlay mb-5 bg-gray-900 text-center text-4xl pt-10 md:pt-20 font-bold text-cyan-500">
             Real-Time Data
           </div>
 
           {/* Alert Button - Moved inside the normal flow */}
-          <a href="/alerts" className="alert-button z-10">
+          <a href="/alerts" className="hidden lg:block alert-button z-10">
             Go to Alerts
           </a>
         </div>

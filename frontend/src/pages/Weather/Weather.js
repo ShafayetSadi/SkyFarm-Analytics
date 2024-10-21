@@ -196,13 +196,13 @@ const data = data_.hourly.time.map((time, index) => ({
                 <div className=' absolute top-5 left-5'>
                     <Menu />
                 </div>
-                <section className="">
+                <section className=" mt-20 lg:mt-10">
 
                     <div className="mb-8">
                         <h2 className="text-4xl font-bold mb-4 text-green-400 text-center">
                             SKYFARM ANALYTICS
                         </h2>
-                        <div className="h-8 bg-gray-900 text-center text-3xl font-semibold text-cyan-500">
+                        <div className=" bg-gray-900 text-center text-3xl font-semibold text-cyan-500">
                             Real-Time Weather Update
                         </div>
                         <div className="mt-4 flex justify-center">

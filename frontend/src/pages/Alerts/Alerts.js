@@ -33,7 +33,7 @@ const Alerts = () => {
         <Menu />
       </div>
       <div className="neon-rain"></div> {/* Futuristic neon rain background */}
-      <h1 className="text-5xl font-bold mb-6 text-neon-blue text-center glow-effect">
+      <h1 className="  text-5xl font-bold mb-6 text-neon-blue text-center glow-effect">
         Active Flood Alerts
       </h1>
       <div className="search-bar-container text-center mb-6">

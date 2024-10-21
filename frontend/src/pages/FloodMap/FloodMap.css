@@ -25,7 +25,6 @@
 }
 
 .alert-button {
-  display: inline-block;
   position: absolute;
   z-index: 2;
   top: 8vh;

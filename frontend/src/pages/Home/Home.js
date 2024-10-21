@@ -33,12 +33,13 @@ const Home = () => {
         {/* New SkyFarm Analytics Section with moving space background */}
         <div className="skyfarm-container">
           <h2>About SkyFarm Analytics</h2>
-          <p>
+          <div className=" mb-8">          <p >
             SkyFarm Analytics is an innovative platform that provides real-time
             insights into climate data, weather patterns, and flood risks. Our
             goal is to equip communities with the information they need to
             respond proactively to environmental challenges.
-          </p>
+          </p></div>
+
         </div>
 
         {/* Info Section with alternating positions for each InfoBox */}

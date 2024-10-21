@@ -5,7 +5,7 @@
 
 /* Earth container that keeps the Earth model on top */
 .earth-container {
-  width: 98vw;
+  width: 100%;
   height: 100vh; /* Full screen for Earth */
   position: relative;
   z-index: 10;
@@ -140,7 +140,6 @@
 .skyfarm-container {
   max-width: 800px;
   margin: 0 auto;
-  padding: 2rem;
   background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
   border-radius: 20px;
   text-align: center;
