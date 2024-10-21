@@ -27,7 +27,7 @@ const Alerts = () => {
   };
 
   return (
-    <div className="container mx-auto p-6 bg-dark-futuristic min-h-screen relative">
+    <div className="container   md:mx-auto p-6 pt-20 lg:pt-10 bg-dark-futuristic min-h-screen relative">
       <div className="Menu absolute top-5 left-5">
         {/* Hamburger Menu */}
         <Menu />
