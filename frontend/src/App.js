@@ -10,8 +10,6 @@ import SkyFarmBot from "./pages/SkyFarmBot/SkyFarmBot";
 import SkyFarmAI from "./pages/SkyFarmAI/SkyFarmAI";
 import Contact from "./pages/Contact/Contact";
 import NotFound from "./pages/NotFound/NotFound";
-import Header from "./components/Header/Header";
-import Footer from "./components/Footer/Footer";
 import Quiz from "./quiz_research/quiz/quiz.jsx";
 import Research from "./quiz_research/research/research.jsx";
 import "./App.css"; // Importing custom styles

@@ -23,6 +23,7 @@ const MenuIcon = () => {
 
   return (
     <div className="menu-container">
+      
       {/* Hamburger Icon */}
       <div
         className={`menu-icon ${isOpen ? "open" : ""}`}
