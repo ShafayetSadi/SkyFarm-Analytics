@@ -53,11 +53,11 @@ const Research = () => {
  
 
   return (
-    <div className="research-container bg-gray-900 min-h-screen py-10 text-gray-200 relative">
+    <div className="research-container bg-gray-900 min-h-screen pt-20 md:py-10 text-gray-200 relative">
       <div className=" absolute top-5 left-5">
         <Menu />
       </div>
-      <h1 className="text-4xl font-bold text-center bg-gradient-to-r from-cyan-400 to-cyan-500 text-transparent bg-clip-text mb-12 animate-float">
+      <h1 className=" text-3xl md:text-4xl font-bold text-center bg-gradient-to-r from-cyan-400 to-cyan-500 text-transparent bg-clip-text mb-12 animate-float">
         Research on Climate Change and Its Effect
       </h1>
       {/* comment */}
