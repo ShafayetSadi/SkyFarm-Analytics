@@ -44,7 +44,7 @@ const SkyFarmAI = () => {
             <header className="text-center text-2xl font-bold text-white mb-4">
                 SkyFarm AI Chatbot
             </header>
-            <section className="px-28 flex justify-center">
+            <section className=" pt-20 lg:pt-0 px-6 lg:px-28 flex justify-center">
                 <WebchatProvider
                     key={JSON.stringify(config)}
                     configuration={config}
